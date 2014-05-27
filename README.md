@@ -35,6 +35,19 @@ example
 
 path/to/bin/win_ruby.bat -e "puts 'Ruby Ship works!'"
 
+## Current versions of ruby:
+
+- Windows: 2.0.0p481
+- OSx: 2.1.2p95
+- More platforms coming. 
+
+The ruby versions should be easy to update. Currently there are no update-script, but Ruby Ship will soon have this. It will  be as easy as this:
+
+```
+/tools/compile_ruby.sh path/to/source/tar_or_zip
+```
+
+Again: This is not made yet, but will be soon. Do you have the knowhow? Why don't you make a pull request?! :D
 
 ## License:
 
