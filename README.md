@@ -39,3 +39,9 @@ path/to/bin/win_ruby.bat -e "puts 'Ruby Ship works!'"
 ## License:
 
 MIT
+
+## TODO:
+
+- Binary for all platforms (compiling from source)
+- Make compile-script for each platform so anyone can update ruby version if needed. (should be easy)
+- Make wrappers for bundle, gem, etc. (could be hard)
