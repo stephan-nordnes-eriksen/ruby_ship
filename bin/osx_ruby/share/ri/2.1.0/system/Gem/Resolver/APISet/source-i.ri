@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"source:ETI"!Gem::Resolver::APISet#source;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"/The Gem::Source that gems are fetched from;T:
+@fileI"%lib/rubygems/resolver/api_set.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Resolver::APISet;FcRDoc::NormalClass0

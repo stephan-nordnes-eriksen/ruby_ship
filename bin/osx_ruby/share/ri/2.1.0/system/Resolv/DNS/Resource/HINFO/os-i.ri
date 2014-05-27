@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"os:ETI"$Resolv::DNS::Resource::HINFO#os;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"(Operating system for this resource.;T:
+@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"!Resolv::DNS::Resource::HINFO;TcRDoc::NormalClass0

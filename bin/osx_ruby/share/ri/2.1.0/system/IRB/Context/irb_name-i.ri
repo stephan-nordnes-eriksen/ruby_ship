@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"irb_name:ETI"IRB::Context#irb_name;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PCan be either name from <code>IRB.conf[:IRB_NAME]</code>, or the number of ;TI"Bthe current job set by JobManager, such as <code>irb#2</code>;T:
+@fileI"lib/irb/context.rb;T:0@omit_headings_from_table_of_contents_below0F@I"IRB::Context;FcRDoc::NormalClass0

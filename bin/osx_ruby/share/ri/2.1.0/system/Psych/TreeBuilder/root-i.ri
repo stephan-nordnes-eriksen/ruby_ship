@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	root:ETI"Psych::TreeBuilder#root;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"-Returns the root node for the built tree;T:
+@fileI"(ext/psych/lib/psych/tree_builder.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Psych::TreeBuilder;FcRDoc::NormalClass0

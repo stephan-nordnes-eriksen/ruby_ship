@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"reason_phrase:ETI"(WEBrick::HTTPResponse#reason_phrase;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""Response reason phrase ("OK");T:
+@fileI" lib/webrick/httpresponse.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPResponse;FcRDoc::NormalClass0
