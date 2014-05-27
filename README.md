@@ -1,4 +1,4 @@
-ruby_ship
+Ruby Ship
 =========
 
 A portable ruby environment.
