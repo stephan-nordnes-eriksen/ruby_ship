@@ -1,0 +1,1 @@
+%~dp0\win_ruby\ruby200\bin\ruby.exe %*
