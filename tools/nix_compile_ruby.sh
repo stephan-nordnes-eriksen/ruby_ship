@@ -1,7 +1,7 @@
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
-    echo "Usage: osx_compile_ruby.sh /path/to/ruby_source.tar.gz"
+    echo "Usage: nix_compile_ruby.sh /path/to/ruby_source.tar.gz"
     exit 1
 fi
 
