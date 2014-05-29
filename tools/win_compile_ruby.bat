@@ -3,7 +3,9 @@
 if [%1]==[] (
 	echo "No arguments supplied"
     echo "Usage: win_compile_ruby.sh /path/to/ruby_source.tar.gz"
-    exit /B   
+   
+    exit /B
+   
 )
 
 call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86
@@ -31,7 +33,7 @@ nmake test
 nmake DESTDIR=%~dp0/../bin/win_ruby install
 
 :: MAKING THE SCRIPT:
-for /f %%i in ('ls %~dp0/../bin/win_ruby') do set RUBY_INSTALL_DIR=%%i
+for /f %%i in ('ls %~dp0/../bin/win_ruby/include') do set RUBY_INSTALL_DIR=%%i
 echo %RUBY_INSTALL_DIR%
 for /f %%i in ('echo %RUBY_INSTALL_DIR% ^| cut -d'-' -f 2') do set RUBY_VERSION_DIR=%%i
 
@@ -43,7 +45,7 @@ cd %~dp0
 rm -rf %~dp0/extracted_ruby
 
 echo "Ruby Ship finished installing Ruby %RUBY_VERSION%!"
-echo "Run scripts by using the bin/ruby_ship.sh as you would use the normal ruby command."
+echo "Run scripts by using the bin/ruby_ship.bat as you would use the normal ruby command."
 echo "Eg.: bin/ruby_ship.bat -v"
 echo "=> ruby %RUBY_VERSION%..."
 
