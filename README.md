@@ -72,7 +72,5 @@ MIT
 
 ## TODO:
 
-- Binary for all platforms (compiling from source)
-- Make compile-script for each platform so anyone can update ruby version if needed. (should be easy)
-- Have the compile script also generate the wrapper to take into consideration changing ruby versions.
+- Binary for all platforms (compiling from source. Just run the ruby\_ship\_compiler on your platform)
 - Make wrappers for bundle, gem, etc. (could be hard)
