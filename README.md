@@ -43,8 +43,8 @@ path/to/bin/ruby_ship.bat -e "puts 'Ruby Ship works!'"
 
 ## Current pre-bundled versions of ruby:
 
-- Windows: 2.0.0p481
-- OSx: 2.1.2p95
+- Windows: 2.1.2p95
+- Darwin (aka. OSx): 2.1.2p95
 - More platforms coming. 
 
 ## Building other ruby version
