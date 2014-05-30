@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"hprecision:ETI"*Resolv::DNS::Resource::LOC#hprecision;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6The horizontal precision using ssize type values ;TI">in meters using scientific notation as 2 integers of XeY ;TI".for precision use value/2 e.g. 2m = +/-1m;T:
+@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::DNS::Resource::LOC;TcRDoc::NormalClass0

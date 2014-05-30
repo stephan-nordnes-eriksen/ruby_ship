@@ -1,1 +1,2 @@
-%~dp0\win_ruby\ruby200\bin\ruby.exe %*
+@echo off 
+%~dp0\win_ruby\bin\ruby.exe %* 

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	sock:ETI"Net::Telnet#sock;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThe socket the Telnet object is using.  Note that this object becomes ;TI"Ia delegate of the Telnet object, so normally you invoke its methods ;TI"#directly on the Telnet object.;T:
+@fileI"lib/net/telnet.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::Telnet;FcRDoc::NormalClass0

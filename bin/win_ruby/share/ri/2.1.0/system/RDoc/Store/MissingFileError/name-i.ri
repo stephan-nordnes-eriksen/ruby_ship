@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:ETI"'RDoc::Store::MissingFileError#name;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":The name of the object the #file would be loaded from;T:
+@fileI"lib/rdoc/store.rb;T:0@omit_headings_from_table_of_contents_below0F@I""RDoc::Store::MissingFileError;FcRDoc::NormalClass0

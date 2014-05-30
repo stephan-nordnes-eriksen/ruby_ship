@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"asset_rel_path:ETI"-RDoc::Generator::Darkfish#asset_rel_path;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"OThe relative path to style sheets and javascript.  By default this is set ;TI" the same as the rel_prefix.;T:
+@fileI"#lib/rdoc/generator/darkfish.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RDoc::Generator::Darkfish;FcRDoc::NormalClass0
