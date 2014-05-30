@@ -14,4 +14,5 @@ else
 	exit 1
 fi
 
-./${OS}_ruby.sh "$@"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+$DIR/${OS}_ruby.sh "$@"
