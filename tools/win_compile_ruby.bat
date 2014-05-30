@@ -27,17 +27,18 @@ echo "Installing ruby version %RUBY_VERSION%"
 
 :: BUILDING RUBY
 cd "%~dp0/extracted_ruby/%RUBYDIR%"
-call %~dp0/extracted_ruby/%RUBYDIR%/win32/configure.bat
+call %~dp0/extracted_ruby/%RUBYDIR%/win32/configure.bat --prefix=%~dp0/../bin/win_ruby
 nmake
 nmake test
-nmake DESTDIR=%~dp0/../bin/win_ruby install
+nmake install
 
 :: MAKING THE SCRIPT:
 for /f %%i in ('ls %~dp0/../bin/win_ruby/include') do set RUBY_INSTALL_DIR=%%i
 echo %RUBY_INSTALL_DIR%
 for /f %%i in ('echo %RUBY_INSTALL_DIR% ^| cut -d'-' -f 2') do set RUBY_VERSION_DIR=%%i
 
-echo %%~dp0\win_ruby\%RUBY_INSTALL_DIR%\bin\ruby.exe %%* > %~dp0/../bin/win_ruby.bat
+echo @echo off > %~dp0/../bin/win_ruby.bat
+echo %%~dp0\win_ruby\bin\ruby.exe %%* >> %~dp0/../bin/win_ruby.bat
 
 
 :: Clean up:

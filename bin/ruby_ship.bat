@@ -1,1 +1,2 @@
-./win_ruby.sh "$@"
+@echo off
+%~dp0/win_ruby.bat %*
