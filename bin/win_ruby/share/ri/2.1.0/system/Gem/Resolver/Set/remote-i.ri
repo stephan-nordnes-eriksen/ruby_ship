@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"remote:ETI"Gem::Resolver::Set#remote;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"7Set to true to disable network access for this set;T:
+@fileI"!lib/rubygems/resolver/set.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Resolver::Set;FcRDoc::NormalClass0

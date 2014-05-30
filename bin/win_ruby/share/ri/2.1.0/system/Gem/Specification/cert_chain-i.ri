@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"cert_chain:ETI""Gem::Specification#cert_chain;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThe certificate chain used to sign this gem.  See Gem::Security for ;TI"details.;T:
+@fileI""lib/rubygems/specification.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Specification;FcRDoc::NormalClassI" Optional gemspec attributes;T

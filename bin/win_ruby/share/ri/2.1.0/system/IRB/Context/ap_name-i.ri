@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"ap_name:ETI"IRB::Context#ap_name;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":A copy of the default <code>IRB.conf[:AP_NAME]</code>;T:
+@fileI"lib/irb/context.rb;T:0@omit_headings_from_table_of_contents_below0F@I"IRB::Context;FcRDoc::NormalClass0

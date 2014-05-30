@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"time_format:ETI"WEBrick::Log#time_format;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HFormat of the timestamp which is applied to each logged line.  The ;TI".default is <tt>"[%Y-%m-%d %H:%M:%S]"</tt>;T:
+@fileI"lib/webrick/log.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::Log;FcRDoc::NormalClass0

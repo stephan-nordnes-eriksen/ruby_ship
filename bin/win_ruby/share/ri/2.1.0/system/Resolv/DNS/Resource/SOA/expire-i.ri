@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"expire:ETI"&Resolv::DNS::Resource::SOA#expire;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"ETime in seconds that a secondary name server is to use the data ;TI"4before refreshing from the primary name server.;T:
+@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::DNS::Resource::SOA;TcRDoc::NormalClass0

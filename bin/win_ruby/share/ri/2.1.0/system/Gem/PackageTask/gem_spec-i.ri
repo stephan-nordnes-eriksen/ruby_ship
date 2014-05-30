@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"gem_spec:ETI"Gem::PackageTask#gem_spec;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LRuby Gem::Specification containing the metadata for this package.  The ;TI"Kname, version and package_files are automatically determined from the ;TI"6gemspec and don't need to be explicitly provided.;T:
+@fileI"!lib/rubygems/package_task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::PackageTask;FcRDoc::NormalClass0
