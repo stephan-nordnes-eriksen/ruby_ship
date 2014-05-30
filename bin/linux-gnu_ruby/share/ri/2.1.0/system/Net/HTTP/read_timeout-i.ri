@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"read_timeout:ETI"Net::HTTP#read_timeout;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"INumber of seconds to wait for one block to be read (via one read(2) ;TI"Dcall). Any number may be used, including Floats for fractional ;TI"Hseconds. If the HTTP object cannot read data in this many seconds, ;TI"Mit raises a Net::ReadTimeout exception. The default value is 60 seconds.;T:
+@fileI"lib/net/http.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::HTTP;FcRDoc::NormalClass0

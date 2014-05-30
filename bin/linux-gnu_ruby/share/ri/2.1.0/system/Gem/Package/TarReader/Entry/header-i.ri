@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"header:ETI"*Gem::Package::TarReader::Entry#header;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Header for this tar entry;T:
+@fileI"-lib/rubygems/package/tar_reader/entry.rb;T:0@omit_headings_from_table_of_contents_below0F@I"#Gem::Package::TarReader::Entry;FcRDoc::NormalClass0

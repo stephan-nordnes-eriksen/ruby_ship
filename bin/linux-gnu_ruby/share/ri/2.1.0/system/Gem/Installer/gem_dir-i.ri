@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"gem_dir:ETI"Gem::Installer#gem_dir;FI"W;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=Available through requiring rubygems/installer_test_case;T:
+@fileI"(lib/rubygems/installer_test_case.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Installer;FcRDoc::NormalClass0

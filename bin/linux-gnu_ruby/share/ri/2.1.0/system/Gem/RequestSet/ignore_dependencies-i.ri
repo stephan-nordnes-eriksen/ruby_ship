@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"ignore_dependencies:ETI"(Gem::RequestSet#ignore_dependencies;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PWhen true, dependency resolution is not performed, only the requested gems ;TI"are installed.;T:
+@fileI" lib/rubygems/request_set.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::RequestSet;FcRDoc::NormalClass0

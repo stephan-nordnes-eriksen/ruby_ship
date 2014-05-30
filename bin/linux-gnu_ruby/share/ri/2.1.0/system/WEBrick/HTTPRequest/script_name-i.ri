@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"script_name:ETI"%WEBrick::HTTPRequest#script_name;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"#The script name (CGI variable);T:
+@fileI"lib/webrick/httprequest.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPRequest;FcRDoc::NormalClassI"Request-URI;T

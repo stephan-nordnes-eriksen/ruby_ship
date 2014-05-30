@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"dest_directory:ETI" Gem::Indexer#dest_directory;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Index install location;T:
+@fileI"lib/rubygems/indexer.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Indexer;FcRDoc::NormalClass0

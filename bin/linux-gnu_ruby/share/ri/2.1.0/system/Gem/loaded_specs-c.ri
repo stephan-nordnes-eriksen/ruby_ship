@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"loaded_specs:ETI"Gem::loaded_specs;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"4Hash of loaded Gem::Specification keyed by name;T:
+@fileI"lib/rubygems.rb;T:0@omit_headings_from_table_of_contents_below0T@I"Gem;FcRDoc::NormalModule0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"status:ETI"OpenURI::Meta#status;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"?returns an Array that consists of status code and message.;T:
+@fileI"lib/open-uri.rb;T:0@omit_headings_from_table_of_contents_below0F@I"OpenURI::Meta;FcRDoc::NormalModule0
