@@ -55,8 +55,6 @@ chmod a+x $DIR/../bin/ruby_ship.sh
 chmod a+x $DIR/../bin/${OS}_ruby.sh
 
 
-
-
 #Clean up:
 rm -rf $DIR/extracted_ruby
 

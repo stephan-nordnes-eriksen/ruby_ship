@@ -1,3 +1,0 @@
-#!/Volumes/DISK_IMG/bin/osx_ruby/bin/ruby
-require 'test/unit'
-exit Test::Unit::AutoRunner.run(true)
