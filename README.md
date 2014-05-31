@@ -1,11 +1,11 @@
 Ruby Ship
 =========
 
-Portable ruby environment on any platform, with any version of MRI Ruby! No need to install Ruby on a computer to use it any more! 
+Portable Ruby environment on any platform, with any version of MRI Ruby! No need to install Ruby on a computer to use it any more! 
 
 The goal of Ruby Ship is to have a single folder which is portable on all platforms. 
 
-This is very usefull when developing ruby applications when your target audience does not have ruby installed, and you do not want to bother with installing ruby for them.
+This is very usefull when developing ruby applications when your target audience do not have Ruby installed, and you do not want to bother with installing Ruby for them.
 
 With Ruby Ship you can copy the entire folder into your project and use the wrappers supplied to make any ruby script run.
 
@@ -37,14 +37,16 @@ path/to/bin/ruby_ship.bat [your normal ruby args]
 
 Example
 
+```
 path/to/bin/ruby_ship.bat -e "puts 'Ruby Ship works!'"
-
+```
 
 
 ## Current pre-bundled versions of ruby:
 
 - Windows: 2.1.2p95
 - Darwin (aka. OSx): 2.1.2p95
+- Linux-gnu (aka. Ubuntu): 2.1.2p95
 - More platforms coming. 
 
 ## Building other ruby version
@@ -66,13 +68,23 @@ Now you can use your ruby_ship.sh/.bat with your newly compiled ruby version! Th
 
 Note: You must compile ruby using ruby\_ship\_build on the platform you want to use this on, but only once :)
 
+## Building requirements
+
+To build on *nix you need to have the following:
+
+- Build tools
+- (Maybe others. TBA)
+
+To build on windows you need to have the following:
+
+- **7-zip with command line tools**. Remember to add to PATH variable (http://www.7-zip.org/)
+- **nmake**. nmake comes bundled with any version of Visual Studio (http://www.visualstudio.com/) _NB: install to default location, or the script won't work_
+
 ## License:
 
 MIT
 
 ## TODO:
 
-- Binary for all platforms (compiling from source)
-- Make compile-script for each platform so anyone can update ruby version if needed. (should be easy)
-- Have the compile script also generate the wrapper to take into consideration changing ruby versions.
+- Binary for all platforms (compiling from source. Just run the ruby\_ship\_compiler on your platform)
 - Make wrappers for bundle, gem, etc. (could be hard)

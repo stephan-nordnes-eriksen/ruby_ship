@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	spec:ETI"Gem::Uninstaller#spec;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThe Gem::Specification for the gem being uninstalled, only set during ;TI"#uninstall_gem;T:
+@fileI" lib/rubygems/uninstaller.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Uninstaller;FcRDoc::NormalClass0

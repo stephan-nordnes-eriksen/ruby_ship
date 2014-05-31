@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	code:ETI"Net::HTTPResponse#code;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"DThe HTTP result code string. For example, '302'.  You can also ;TI"Fdetermine the response type by examining which response subclass ;TI"+the response object is an instance of.;T:
+@fileI"lib/net/http/response.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::HTTPResponse;FcRDoc::NormalClass0

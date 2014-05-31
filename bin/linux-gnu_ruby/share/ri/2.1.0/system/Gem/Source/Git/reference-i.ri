@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"reference:ETI"Gem::Source::Git#reference;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=The commit reference used for checking out this git gem.;T:
+@fileI"lib/rubygems/source/git.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Source::Git;FcRDoc::NormalClass0

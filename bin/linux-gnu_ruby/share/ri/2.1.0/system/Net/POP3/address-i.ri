@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"address:ETI"Net::POP3#address;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The address to connect to.;T:
+@fileI"lib/net/pop.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::POP3;FcRDoc::NormalClass0

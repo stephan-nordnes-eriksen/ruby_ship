@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"development:ETI"$Gem::DependencyList#development;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I">Allows enabling/disabling use of development dependencies;T:
+@fileI"$lib/rubygems/dependency_list.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::DependencyList;FcRDoc::NormalClass0

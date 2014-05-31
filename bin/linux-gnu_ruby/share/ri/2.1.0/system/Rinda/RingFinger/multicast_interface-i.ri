@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"multicast_interface:ETI"*Rinda::RingFinger#multicast_interface;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=The interface index to send IPv6 multicast packets from.;T:
+@fileI"lib/rinda/ring.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Rinda::RingFinger;FcRDoc::NormalClass0
