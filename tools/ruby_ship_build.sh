@@ -47,12 +47,16 @@ RUBY_INSTALL_DIR="$(ls $DIR/../bin/${OS}_ruby/include)"
 RUBY_VERSION_DIR="$(echo $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
 
 echo "DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\"" > $DIR/../bin/${OS}_ruby.sh
-
 echo "\$DIR/${OS}_ruby/bin/ruby \"\$@\" -I \$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/ -I \$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/ -I \$DIR/${OS}_ruby/bin/ -I \$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/x86_64-darwin13.0/" >> $DIR/../bin/${OS}_ruby.sh
+
+echo "DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\"" > $DIR/../bin/${OS}_gem.sh
+echo "GEM_PATH=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/bin/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/x86_64-darwin13.0/" >> $DIR/../bin/${OS}_gem.sh
+echo "GEM_HOME=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/" >> $DIR/../bin/${OS}_gem.sh
 
 
 chmod a+x $DIR/../bin/ruby_ship.sh
 chmod a+x $DIR/../bin/${OS}_ruby.sh
+chmod a+x $DIR/../bin/${OS}_gem.sh
 
 
 #Clean up:
