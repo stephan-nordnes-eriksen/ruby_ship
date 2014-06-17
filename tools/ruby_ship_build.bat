@@ -40,6 +40,8 @@ for /f %%i in ('echo %RUBY_INSTALL_DIR% ^| cut -d'-' -f 2') do set RUBY_VERSION_
 echo @echo off > %~dp0/../bin/win_ruby.bat
 echo %%~dp0\win_ruby\bin\ruby.exe %%* >> %~dp0/../bin/win_ruby.bat
 
+echo @echo off > %~dp0/../bin/win_gem.bat
+echo %%~dp0\win_ruby\bin\gem.bat %%* >> %~dp0/../bin/win_gem.bat
 
 :: Clean up:
 cd %~dp0
