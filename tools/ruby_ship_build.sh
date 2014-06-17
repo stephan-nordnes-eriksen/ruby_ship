@@ -52,7 +52,7 @@ echo "\$DIR/${OS}_ruby/bin/ruby \"\$@\" -I \$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_
 echo "DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\"" > $DIR/../bin/${OS}_gem.sh
 echo "GEM_PATH=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/bin/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/x86_64-darwin13.0/" >> $DIR/../bin/${OS}_gem.sh
 echo "GEM_HOME=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/" >> $DIR/../bin/${OS}_gem.sh
-
+echo "\$DIR/${OS}_ruby/bin/gem \"\$@\"" >> $DIR/../bin/${OS}_gem.sh
 
 chmod a+x $DIR/../bin/ruby_ship.sh
 chmod a+x $DIR/../bin/${OS}_ruby.sh
