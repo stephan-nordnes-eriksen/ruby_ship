@@ -27,7 +27,7 @@ Ruby Ship comes with tools to compile your favourite Ruby version too! This way,
 
 ## Usage:
 
-in a command line environment:
+In a command line environment:
 ```
 path/to/bin/ruby_ship.sh [your normal ruby args]
 ```
@@ -41,6 +41,18 @@ Example
 path/to/bin/ruby_ship.bat -e "puts 'Ruby Ship works!'"
 ```
 
+To use gem command:
+```
+path/to/bin/ruby_ship_gem.sh [your normal gem args]
+```
+
+Example
+
+```
+path/to/bin/ruby_ship_gem.sh list
+```
+
+NOTE: Gem is only available on *nix systems (not windows) for now.
 
 ## Current pre-bundled versions of ruby:
 
