@@ -88,3 +88,7 @@ MIT
 
 - Binary for all platforms (compiling from source. Just run the ruby\_ship\_compiler on your platform)
 - Make wrappers for bundle, gem, etc. (could be hard)
+- Interactive build tool that prompts you with different ruby versions.
+- Online builder that downloads the ruby source and runs compile on it for you
+- Online repo of multiple binaries for download (so you can choose ruby version without building yourself, and not download all of them at once)
+- More awesome stuff
