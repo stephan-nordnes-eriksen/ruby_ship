@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"appname:ETI" Logger::Application#appname;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1Name of the application given at initialize.;T:
+@fileI"lib/logger.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Logger::Application;TcRDoc::NormalClass0

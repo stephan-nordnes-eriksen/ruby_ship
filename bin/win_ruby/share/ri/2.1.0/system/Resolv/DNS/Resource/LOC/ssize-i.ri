@@ -1,3 +1,0 @@
-U:RDoc::Attr[iI"
-ssize:ETI"%Resolv::DNS::Resource::LOC#ssize;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"$The spherical size of this LOC ;TI"=in meters using scientific notation as 2 integers of XeY;T:
-@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::DNS::Resource::LOC;TcRDoc::NormalClass0

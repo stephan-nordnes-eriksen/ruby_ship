@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"source:ETI"#Gem::SourceFetchProblem#source;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+The source that had the fetch problem.;T:
+@fileI"lib/rubygems/errors.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::SourceFetchProblem;FcRDoc::NormalClass0

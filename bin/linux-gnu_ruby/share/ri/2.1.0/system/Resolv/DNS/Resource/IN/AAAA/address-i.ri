@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"address:ETI",Resolv::DNS::Resource::IN::AAAA#address;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",The Resolv::IPv6 address for this AAAA.;T:
-@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"$Resolv::DNS::Resource::IN::AAAA;TcRDoc::NormalClass0

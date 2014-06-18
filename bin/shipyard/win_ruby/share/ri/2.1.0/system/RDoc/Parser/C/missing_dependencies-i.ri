@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"missing_dependencies:ETI")RDoc::Parser::C#missing_dependencies;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PClasses found while parsing the C file that were not yet registered due to ;TI"Ba missing enclosing class.  These are processed by do_missing;T:
+@fileI"lib/rdoc/parser/c.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RDoc::Parser::C;FcRDoc::NormalClass0

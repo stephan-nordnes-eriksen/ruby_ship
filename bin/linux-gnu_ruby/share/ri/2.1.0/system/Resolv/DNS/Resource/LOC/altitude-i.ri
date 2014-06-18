@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"altitude:ETI"(Resolv::DNS::Resource::LOC#altitude;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"hThe altitude of the LOC above a reference sphere whose surface sits 100km below the WGS84 spheroid ;TI"0in centimeters as an unsigned 32bit integer;T:
-@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::DNS::Resource::LOC;TcRDoc::NormalClass0

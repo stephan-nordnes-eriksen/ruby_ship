@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"
+minor:ETI"WEBrick::HTTPVersion#minor;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&The minor protocol version number;T:
+@fileI"lib/webrick/httpversion.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPVersion;FcRDoc::NormalClass0

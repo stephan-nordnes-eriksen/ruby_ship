@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"file_output:ETI"*RDoc::Generator::Darkfish#file_output;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MWhen false the generate methods return a String instead of writing to a ;TI" file.  The default is true.;T:
+@fileI"#lib/rdoc/generator/darkfish.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RDoc::Generator::Darkfish;FcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"gem_home:ETI"Gem::Installer#gem_home;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6The gem repository the gem will be installed into;T:
+@fileI"lib/rubygems/installer.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::Installer;FcRDoc::NormalClass0

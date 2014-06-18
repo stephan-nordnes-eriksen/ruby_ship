@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"return_format:ETI"IRB::Context#return_format;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HThe format of the return statement, set by #prompt_mode= using the ;TI"D+:RETURN+ of the +mode+ passed to set the current #prompt_mode.;T:
+@fileI"lib/irb/context.rb;T:0@omit_headings_from_table_of_contents_below0F@I"IRB::Context;FcRDoc::NormalClass0

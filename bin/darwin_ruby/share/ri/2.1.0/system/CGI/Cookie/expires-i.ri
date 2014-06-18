@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"expires:ETI"CGI::Cookie#expires;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"3Time at which this cookie expires, as a +Time+;T:
-@fileI"lib/cgi/cookie.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CGI::Cookie;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"raw_header:ETI"$WEBrick::HTTPRequest#raw_header;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""The raw header of the request;T:
+@fileI"lib/webrick/httprequest.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPRequest;FcRDoc::NormalClassI"Header and entity body;T

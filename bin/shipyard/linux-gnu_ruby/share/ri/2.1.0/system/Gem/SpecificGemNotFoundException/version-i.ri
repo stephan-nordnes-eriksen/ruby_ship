@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"version:ETI".Gem::SpecificGemNotFoundException#version;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"4The version of the gem that could not be found.;T:
+@fileI"lib/rubygems/exceptions.rb;T:0@omit_headings_from_table_of_contents_below0F@I"&Gem::SpecificGemNotFoundException;FcRDoc::NormalClass0

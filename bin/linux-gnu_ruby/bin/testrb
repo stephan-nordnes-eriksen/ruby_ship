@@ -1,3 +1,0 @@
-#!/home/stephan/Documents/github/ruby_ship/tools/../bin/linux-gnu_ruby/bin/ruby
-require 'test/unit'
-exit Test::Unit::AutoRunner.run(true)

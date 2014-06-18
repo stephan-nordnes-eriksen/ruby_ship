@@ -1,6 +1,6 @@
 OS="unknown"
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	OS="linux-gnu"
+if [[ "$OSTYPE" == "linux"* ]]; then
+	OS="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	OS="darwin"
 elif [[ "$OSTYPE" == "cygwin" ]]; then
@@ -15,4 +15,4 @@ else
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-$DIR/${OS}_ruby.sh "$@"
+$DIR/shipyard/${OS}_ruby.sh "$@"

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"tagging:ETI"(OpenSSL::ASN1::Constructive#tagging;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"EMay be used as a hint for encoding a value either implicitly or ;TI"Gexplicitly by setting it either to +:IMPLICIT+ or to +:EXPLICIT+. ;TI"A+tagging+ is not set when a ASN.1 structure is parsed using ;TI"OpenSSL::ASN1.decode.;T:
+@fileI"ext/openssl/ossl_asn1.c;T:0@omit_headings_from_table_of_contents_below0F@I" OpenSSL::ASN1::Constructive;FcRDoc::NormalClass0

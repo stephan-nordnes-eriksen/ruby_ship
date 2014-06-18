@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	line:ETI"/Gem::RequestSet::Lockfile::ParseError#line;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"-The line where the error was encountered;T:
+@fileI")lib/rubygems/request_set/lockfile.rb;T:0@omit_headings_from_table_of_contents_below0F@I"*Gem::RequestSet::Lockfile::ParseError;FcRDoc::NormalClass0

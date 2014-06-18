@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"file_name:ETI"5Gem::StreamUI::VerboseDownloadReporter#file_name;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"*The current file name being displayed;T:
+@fileI"%lib/rubygems/user_interaction.rb;T:0@omit_headings_from_table_of_contents_below0F@I"+Gem::StreamUI::VerboseDownloadReporter;FcRDoc::NormalClass0
