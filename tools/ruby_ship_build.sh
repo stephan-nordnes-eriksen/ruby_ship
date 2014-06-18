@@ -7,8 +7,8 @@ fi
 
 #DETECT_OS
 OS="unknown"
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-	OS="linux-gnu"
+if [[ "$OSTYPE" == "linux"* ]]; then
+	OS="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	OS="darwin"
 elif [[ "$OSTYPE" == "cygwin" ]]; then
@@ -23,45 +23,171 @@ fi
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Compiling and installing ruby"
 
-#PRE INSTALL CLEANUP
-rm -rf $DIR/extracted_ruby
-mkdir $DIR/extracted_ruby
-tar -xzf $1 -C $DIR/extracted_ruby
+# #PRE INSTALL CLEANUP
+# rm -rf $DIR/extracted_ruby
+# mkdir $DIR/extracted_ruby
+# tar -xzf $1 -C $DIR/extracted_ruby
 
-RUBYDIR="$(ls $DIR/extracted_ruby)"
-RUBY_VERSION="$(echo $RUBYDIR | cut -d'-' -f 2)"
+# RUBYDIR="$(ls $DIR/extracted_ruby)"
+# RUBY_VERSION="$(echo $RUBYDIR | cut -d'-' -f 2)"
 
-echo "Installing ruby version $RUBY_VERSION"
-
-
-#BUILDING RUBY
-cd $DIR/extracted_ruby/$RUBYDIR
-if [[ "$OS" == "darwin" ]]; then
-	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/${OS}_ruby --with-opt-dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm):$(brew --prefix libffi)"
-else
-	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/${OS}_ruby
-fi
-make
-make install
+# echo "Installing ruby version $RUBY_VERSION"
 
 
+# #BUILDING RUBY
+# cd $DIR/extracted_ruby/$RUBYDIR
+# if [[ "$OS" == "darwin" ]]; then
+# 	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby --with-opt-dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm):$(brew --prefix libffi)"
+# else
+# 	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby
+# fi
+# make
+# make install
 
-#MAKING THE SCRIPT:
-RUBY_INSTALL_DIR="$(ls $DIR/../bin/${OS}_ruby/include)"
+
+#SETTING UP REFERENCE DIRECTORIES
+RUBY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/include)"
 RUBY_VERSION_DIR="$(echo $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
+RUBY_BINARY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR | grep ${OS})"
 
-echo "DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\"" > $DIR/../bin/${OS}_ruby.sh
-echo "\$DIR/${OS}_ruby/bin/ruby \"\$@\" -I \$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/ -I \$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/ -I \$DIR/${OS}_ruby/bin/ -I \$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/x86_64-darwin13.0/" >> $DIR/../bin/${OS}_ruby.sh
 
-echo "DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\"" > $DIR/../bin/${OS}_gem.sh
-echo "GEM_PATH=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/bin/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/x86_64-darwin13.0/" >> $DIR/../bin/${OS}_gem.sh
-echo "GEM_HOME=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/" >> $DIR/../bin/${OS}_gem.sh
-echo "\$DIR/${OS}_ruby/bin/gem \"\$@\"" >> $DIR/../bin/${OS}_gem.sh
+#SETTING UP COMMON WRAPPER COMPONENTS
+OS_SELECTOR=$'OS=\"unknown\"\nif [[ \"$OSTYPE\" == \"linux\"* ]]; then\n	OS=\"linux\"\nelif [[ \"$OSTYPE\" == \"darwin\"* ]]; then\n	OS=\"darwin\"\nelif [[ \"$OSTYPE\" == \"cygwin\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"win32\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"freebsd\"* ]]; then\n	OS=\"freebsd\"\nelse\n	echo \"OS not compatible\"\n	exit 1\nfi\n'
+DIR_SETTER="DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\""
+
+
+
+#BUILDING RUBY SHIP WRAPPERS:
+#ruby_ship
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship.sh
+echo "\$DIR/shipyard/\${OS}_ruby.sh \"\$@\"" >> $DIR/../bin/ruby_ship.sh
+
+#ruby_ship_gem
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_gem.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_gem.sh
+echo "\$DIR/shipyard/\${OS}_gem.sh \"\$@\"" >> $DIR/../bin/ruby_ship_gem.sh
+
+#ruby_ship_erb
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_erb.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_erb.sh
+echo "\$DIR/shipyard/\${OS}_erb.sh \"\$@\"" >> $DIR/../bin/ruby_ship_erb.sh
+
+#ruby_ship_irb
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_irb.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_irb.sh
+echo "\$DIR/shipyard/\${OS}_irb.sh \"\$@\"" >> $DIR/../bin/ruby_ship_irb.sh
+
+#ruby_ship_rake
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_rake.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_rake.sh
+echo "\$DIR/shipyard/\${OS}_rake.sh \"\$@\"" >> $DIR/../bin/ruby_ship_rake.sh
+
+#ruby_ship_rdoc
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_rdoc.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_rdoc.sh
+echo "\$DIR/shipyard/\${OS}_rdoc.sh \"\$@\"" >> $DIR/../bin/ruby_ship_rdoc.sh
+
+#ruby_ship_ri
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_ri.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_ri.sh
+echo "\$DIR/shipyard/\${OS}_ri.sh \"\$@\"" >> $DIR/../bin/ruby_ship_ri.sh
+
+#ruby_ship_testrb
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_testrb.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_testrb.sh
+echo "\$DIR/shipyard/\${OS}_testrb.sh \"\$@\"" >> $DIR/../bin/ruby_ship_testrb.sh
+
+#ruby_ship_bundle
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_bundle.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_bundle.sh
+echo "\$DIR/shipyard/\${OS}_bundle.sh \"\$@\"" >> $DIR/../bin/ruby_ship_bundle.sh
+
+#ruby_ship_bundler
+echo "$OS_SELECTOR" > $DIR/../bin/ruby_ship_bundler.sh
+echo "$DIR_SETTER" >> $DIR/../bin/ruby_ship_bundler.sh
+echo "\$DIR/shipyard/\${OS}_bundler.sh \"\$@\"" >> $DIR/../bin/ruby_ship_bundler.sh
+
+
+
+
+
+#MAKING THE OS SPECIFIC SCRIPTS:
+
+GEM_PATH_SETTER="GEM_PATH=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/:\$DIR/${OS}_ruby/bin/:\$DIR/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/$RUBY_BINARY_INSTALL_DIR/"
+GEM_HOME_SETTER="GEM_HOME=\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/"
+
+#OS_ruby
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_ruby.sh
+echo "\$DIR/${OS}_ruby/bin/ruby \"\$@\" -I \$DIR/shipyard/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/ -I \$DIR/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/ -I \$DIR/shipyard/${OS}_ruby/bin/ -I \$DIR/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/$RUBY_BINARY_INSTALL_DIR/" >> $DIR/../bin/shipyard/${OS}_ruby.sh
+
+#gem command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_gem.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_gem.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_gem.sh
+echo "\$DIR/${OS}_ruby/bin/gem \"\$@\"" >> $DIR/../bin/shipyard/${OS}_gem.sh
+
+#erb command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_erb.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_erb.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_erb.sh
+echo "\$DIR/${OS}_ruby/bin/erb \"\$@\"" >> $DIR/../bin/shipyard/${OS}_erb.sh
+
+#irb command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_irb.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_irb.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_irb.sh
+echo "\$DIR/${OS}_ruby/bin/irb \"\$@\"" >> $DIR/../bin/shipyard/${OS}_irb.sh
+
+#rake command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_rake.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_rake.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_rake.sh
+echo "\$DIR/${OS}_ruby/bin/rake \"\$@\"" >> $DIR/../bin/shipyard/${OS}_rake.sh
+
+#rdoc command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_rdoc.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_rdoc.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_rdoc.sh
+echo "\$DIR/${OS}_ruby/bin/rdoc \"\$@\"" >> $DIR/../bin/shipyard/${OS}_rdoc.sh
+
+#ri command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_ri.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_ri.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_ri.sh
+echo "\$DIR/${OS}_ruby/bin/ri \"\$@\"" >> $DIR/../bin/shipyard/${OS}_ri.sh
+
+#testrb command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_testrb.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_testrb.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_testrb.sh
+echo "\$DIR/${OS}_ruby/bin/testrb \"\$@\"" >> $DIR/../bin/shipyard/${OS}_testrb.sh
+
+#bundle command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+
+#bundler command script:
+echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
+echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+
 
 chmod a+x $DIR/../bin/ruby_ship.sh
-chmod a+x $DIR/../bin/${OS}_ruby.sh
-chmod a+x $DIR/../bin/${OS}_gem.sh
 
+chmod a+x $DIR/../bin/shipyard/${OS}_ruby.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_gem.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_erb.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_irb.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_rake.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_rdoc.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_ri.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_testrb.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_bundle.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_bundler.sh
 
 #Clean up:
 rm -rf $DIR/extracted_ruby
