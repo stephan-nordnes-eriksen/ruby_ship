@@ -36,7 +36,11 @@ echo "Installing ruby version $RUBY_VERSION"
 
 #BUILDING RUBY
 cd $DIR/extracted_ruby/$RUBYDIR
-$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/${OS}_ruby
+if [[ "$OS" == "darwin" ]]; then
+	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/${OS}_ruby --with-opt-dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm):$(brew --prefix libffi)"
+else
+	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/${OS}_ruby
+fi
 make
 make install
 
