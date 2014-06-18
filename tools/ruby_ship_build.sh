@@ -1,3 +1,4 @@
+#VERIFY PARAMETERS
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
@@ -5,7 +6,7 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-#DETECT_OS
+#DETECT OPERATING SYSTEM
 OS="unknown"
 if [[ "$OSTYPE" == "linux"* ]]; then
 	OS="linux"
@@ -19,30 +20,35 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 	OS="freebsd"
 fi
 
-
+#DETERMINE DIRECTORY OF THIS SCRIPT
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo "Compiling and installing ruby"
 
-# #PRE INSTALL CLEANUP
-# rm -rf $DIR/extracted_ruby
-# mkdir $DIR/extracted_ruby
-# tar -xzf $1 -C $DIR/extracted_ruby
+#PRE INSTALL CLEANUP
+rm -rf $DIR/extracted_ruby
+mkdir $DIR/extracted_ruby
 
-# RUBYDIR="$(ls $DIR/extracted_ruby)"
-# RUBY_VERSION="$(echo $RUBYDIR | cut -d'-' -f 2)"
+#UNZIP SOURCE
+tar -xzf $1 -C $DIR/extracted_ruby
 
-# echo "Installing ruby version $RUBY_VERSION"
+#GET RUBY VERSION AND DIRECTORY
+RUBYDIR="$(ls $DIR/extracted_ruby)"
+RUBY_VERSION="$(echo $RUBYDIR | cut -d'-' -f 2)"
 
+echo "############################"
+echo "Ruby Ship is installing ruby version $RUBY_VERSION"
+echo "############################"
 
-# #BUILDING RUBY
-# cd $DIR/extracted_ruby/$RUBYDIR
-# if [[ "$OS" == "darwin" ]]; then
-# 	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby --with-opt-dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm):$(brew --prefix libffi)"
-# else
-# 	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby
-# fi
-# make
-# make install
+#BUILDING RUBY
+cd $DIR/extracted_ruby/$RUBYDIR
+if [[ "$OS" == "darwin" ]]; then
+	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby --with-opt-dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm):$(brew --prefix libffi)"
+else
+	$DIR/extracted_ruby/$RUBYDIR/configure --prefix=$DIR/../bin/shipyard/${OS}_ruby
+fi
+make
+make install
 
 
 #SETTING UP REFERENCE DIRECTORIES
@@ -50,10 +56,10 @@ RUBY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/include)"
 RUBY_VERSION_DIR="$(echo $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
 RUBY_BINARY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR | grep ${OS})"
 
-
 #SETTING UP COMMON WRAPPER COMPONENTS
 OS_SELECTOR=$'OS=\"unknown\"\nif [[ \"$OSTYPE\" == \"linux\"* ]]; then\n	OS=\"linux\"\nelif [[ \"$OSTYPE\" == \"darwin\"* ]]; then\n	OS=\"darwin\"\nelif [[ \"$OSTYPE\" == \"cygwin\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"win32\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"freebsd\"* ]]; then\n	OS=\"freebsd\"\nelse\n	echo \"OS not compatible\"\n	exit 1\nfi\n'
 DIR_SETTER="DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\""
+
 
 
 
@@ -177,6 +183,15 @@ echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler \"\$@\"" >> $
 
 
 chmod a+x $DIR/../bin/ruby_ship.sh
+chmod a+x $DIR/../bin/ruby_ship_gem.sh
+chmod a+x $DIR/../bin/ruby_ship_erb.sh
+chmod a+x $DIR/../bin/ruby_ship_irb.sh
+chmod a+x $DIR/../bin/ruby_ship_rake.sh
+chmod a+x $DIR/../bin/ruby_ship_rdoc.sh
+chmod a+x $DIR/../bin/ruby_ship_ri.sh
+chmod a+x $DIR/../bin/ruby_ship_testrb.sh
+chmod a+x $DIR/../bin/ruby_ship_bundle.sh
+chmod a+x $DIR/../bin/ruby_ship_bundler.sh
 
 chmod a+x $DIR/../bin/shipyard/${OS}_ruby.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_gem.sh
@@ -189,11 +204,14 @@ chmod a+x $DIR/../bin/shipyard/${OS}_testrb.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_bundle.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_bundler.sh
 
-#Clean up:
+#CLEAN UP AFTER EXTRACTION
 rm -rf $DIR/extracted_ruby
 
 
-#
+#NOTIFY USER ON HOW TO USE RUBY SHIP
+echo "############################"
+echo "############DONE############"
+echo "############################"
 echo "Ruby Ship finished installing Ruby $RUBY_VERSION!"
 echo "Run scripts by using the bin/ruby_ship.sh as you would use the normal ruby command."
 echo "Eg.: bin/ruby_ship.sh -v"
