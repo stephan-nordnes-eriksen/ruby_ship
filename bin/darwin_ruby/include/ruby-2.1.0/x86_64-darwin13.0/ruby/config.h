@@ -116,9 +116,7 @@
 #define FUNC_CDECL(x) __attribute__ ((cdecl)) x
 #define HAVE_GCC_ATOMIC_BUILTINS 1
 #define HAVE_GCC_SYNC_BUILTINS 1
-#define UNREACHABLE __builtin_unreachable()
 #define RUBY_FUNC_EXPORTED __attribute__ ((visibility("default"))) extern
-#define RUBY_FUNCTION_NAME_STRING __func__
 #define HAVE_DECL_SYS_NERR 1
 #define HAVE_DECL_GETENV 1
 #define SIZEOF_SIZE_T 8

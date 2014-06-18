@@ -45,7 +45,7 @@ LIBRUBYARG_SHARED=
 LIBRUBYARG_STATIC=-l${RUBY_SO_NAME}-static -framework CoreFoundation
 LIBRUBYARG=${LIBRUBYARG_STATIC}
 LIBS=-lpthread -ldl -lobjc
-DLDFLAGS=-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress
+DLDFLAGS=-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libyaml/lib -L/usr/local/Cellar/gdbm/1.10/lib -L/usr/local/opt/libffi/lib 
 
 Name: Ruby
 Description: Object Oriented Script Language
