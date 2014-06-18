@@ -169,18 +169,31 @@ echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_testrb.sh
 echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_testrb.sh
 echo "\$DIR/${OS}_ruby/bin/testrb \"\$@\"" >> $DIR/../bin/shipyard/${OS}_testrb.sh
 
-#bundle command script:
-echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
-echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
-echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
-echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
 
-#bundler command script:
-echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
-echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
-echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
-echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
-
+#for some reason darwin installs bundler to a strange location.
+if [[ "$OS" == "darwin" ]]; then
+	#bundle command script darwin:
+	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	#bundler command script darwin:
+	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "\$DIR/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+else
+	#bundle command script:
+	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "\$DIR/${OS}_ruby/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	#bundler command script:
+	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "\$DIR/${OS}_ruby/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+fi
 
 chmod a+x $DIR/../bin/ruby_ship.sh
 chmod a+x $DIR/../bin/ruby_ship_gem.sh
