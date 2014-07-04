@@ -42,6 +42,7 @@ path/to/bin/ruby_ship.bat -e "puts 'Ruby Ship works!'"
 ```
 
 To use gem command:
+WARNING: There is currently some path-problems with the gem command, as per Issue 1: https://github.com/stephan-nordnes-eriksen/ruby_ship/issues/1.
 ```
 path/to/bin/ruby_ship_gem.sh [your normal gem args]
 ```
