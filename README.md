@@ -42,7 +42,6 @@ path/to/bin/ruby_ship.bat -e "puts 'Ruby Ship works!'"
 ```
 
 To use gem command:
-WARNING: There is currently some path-problems with the gem command, as per Issue 1: https://github.com/stephan-nordnes-eriksen/ruby_ship/issues/1.
 ```
 path/to/bin/ruby_ship_gem.sh [your normal gem args]
 ```
@@ -57,9 +56,9 @@ NOTE: Gem is only available on *nix systems (not windows) for now.
 
 ## Current pre-bundled versions of ruby:
 
-- Windows: 2.1.2p95
-- Darwin (aka. OSx): 2.1.2p95
-- Linux-gnu (aka. Ubuntu): 2.1.2p95
+- Windows: 2.1.2p95 - Outdated + bugs. Rebuild
+- Darwin (aka. OSx): 2.1.2p95 - Working
+- Linux-gnu (aka. Ubuntu): 2.1.2p95 - Outdated + bugs. Rebuild
 - More platforms coming. 
 
 ## Building other ruby version
@@ -100,7 +99,6 @@ MIT
 ## TODO:
 
 - Binary for all platforms (compiling from source. Just run the ruby\_ship\_compiler on your platform)
-- Make wrappers for bundle, gem, etc. (could be hard)
 - Interactive build tool that prompts you with different ruby versions.
 - Online builder that downloads the ruby source and runs compile on it for you
 - Online repo of multiple binaries for download (so you can choose ruby version without building yourself, and not download all of them at once)
