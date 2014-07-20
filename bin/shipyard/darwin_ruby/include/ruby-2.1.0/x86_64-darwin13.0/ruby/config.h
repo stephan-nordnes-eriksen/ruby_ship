@@ -314,8 +314,10 @@
 #define HAVE_EXECINFO_H 1
 #define HAVE_BACKTRACE 1
 #define BROKEN_BACKTRACE 1
+#define HAVE_DLADDR 1
 #define DLEXT_MAXLEN 7
 #define DLEXT ".bundle"
 #define HAVE_PTHREAD_H 1
+#define LOAD_RELATIVE 1
 #define RUBY_PLATFORM "x86_64-darwin13.0"
 #endif /* INCLUDE_RUBY_CONFIG_H */

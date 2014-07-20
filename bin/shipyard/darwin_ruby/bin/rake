@@ -1,4 +1,8 @@
-#!/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby/bin/ruby
+#!/bin/sh
+# -*- ruby -*-
+bindir=`cd -P "${0%/*}" 2>/dev/null; pwd`
+exec "$bindir/ruby" -x "$0" "$@"
+#!/usr/bin/env ruby
 
 #--
 # Copyright (c) 2003, 2004, 2005, 2006, 2007  Jim Weirich

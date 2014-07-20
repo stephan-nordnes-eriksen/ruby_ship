@@ -1,4 +1,8 @@
-#!/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby/bin/ruby
+#!/bin/sh
+# -*- ruby -*-
+bindir=`cd -P "${0%/*}" 2>/dev/null; pwd`
+exec "$bindir/ruby" -x "$0" "$@"
+#!/usr/bin/env ruby
 # Tiny eRuby --- ERB2
 # Copyright (c) 1999-2000,2002 Masatoshi SEKI
 # You can redistribute it and/or modify it under the same terms as Ruby.
