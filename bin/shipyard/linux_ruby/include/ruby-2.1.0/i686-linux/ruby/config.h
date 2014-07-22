@@ -336,9 +336,11 @@
 #define USE_ELF 1
 #define HAVE_ELF_H 1
 #define HAVE_BACKTRACE 1
+#define HAVE_DLADDR 1
 #define DLEXT_MAXLEN 3
 #define DLEXT ".so"
 #define HAVE_PTHREAD_H 1
 #define HAVE_MEMMEM 1
+#define LOAD_RELATIVE 1
 #define RUBY_PLATFORM "i686-linux"
 #endif /* INCLUDE_RUBY_CONFIG_H */
