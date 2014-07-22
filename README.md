@@ -57,7 +57,7 @@ path/to/bin/ruby_ship_gem.sh list
 
 - Windows: 2.1.2p95 - Outdated + bugs. Rebuild
 - Darwin (aka. OSx): 2.1.2p95 - Working
-- Linux-gnu (aka. Ubuntu): 2.1.2p95 - Outdated + bugs. Rebuild
+- Linux (Ubuntu): 2.1.2p95 - Working
 - More platforms coming. 
 
 ## Building other ruby version
