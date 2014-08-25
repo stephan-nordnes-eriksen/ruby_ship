@@ -68,9 +68,12 @@ Getting a new version of ruby is super-easy! Go to https://www.ruby-lang.org/en/
 #For *nix
 /tools/ruby_ship_build.sh path/to/source/ruby-X.Y.Z.tar.gz
 ```
+
+
+ **(Windows build script is currently broken)**
 ```
 ::For windows
-/tools/ruby_ship_build.bat path/to/source/ruby-X.Y.Z.tar.gz
+::CURRENTLY BROKEN *sad-face* /tools/ruby_ship_build.bat path/to/source/ruby-X.Y.Z.tar.gz
 ```
 
 Thats it!
