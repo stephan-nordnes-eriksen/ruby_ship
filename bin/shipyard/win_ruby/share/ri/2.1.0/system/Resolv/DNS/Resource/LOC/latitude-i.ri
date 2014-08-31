@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"latitude:ETI"(Resolv::DNS::Resource::LOC#latitude;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":The latitude for this LOC where 2**31 is the equator ;TI"Ain thousandths of an arc second as an unsigned 32bit integer;T:
-@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::DNS::Resource::LOC;TcRDoc::NormalClass0

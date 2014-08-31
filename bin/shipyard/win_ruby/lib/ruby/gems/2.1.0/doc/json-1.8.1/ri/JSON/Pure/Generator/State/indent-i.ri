@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"indent:ETI"(JSON::Pure::Generator::State#indent;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I";This string is used to indent levels in the JSON text.;T:
+@fileI"lib/json/pure/generator.rb;T:0@omit_headings_from_table_of_contents_below0F@I"!JSON::Pure::Generator::State;FcRDoc::NormalClass0

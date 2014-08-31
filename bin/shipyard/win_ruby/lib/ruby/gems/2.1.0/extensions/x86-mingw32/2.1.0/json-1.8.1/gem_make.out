@@ -1,0 +1,13 @@
+C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/bin/ruby.exe extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+generating parser-i386-mingw32.def
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20140830-8064-6prdan/json/ext
+installing default parser libraries

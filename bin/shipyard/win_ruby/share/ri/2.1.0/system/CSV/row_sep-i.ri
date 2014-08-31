@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"row_sep:ETI"CSV#row_sep;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe encoded <tt>:row_sep</tt> used in parsing and writing.  See CSV::new ;TI"for details.;T:
-@fileI"lib/csv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CSV;TcRDoc::NormalClass0

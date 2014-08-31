@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"encoding:ETI"$XMP::StringInputMethod#encoding;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I">Returns the encoding of last expression printed by #puts.;T:
-@fileI"lib/irb/xmp.rb;T:0@omit_headings_from_table_of_contents_below0F@I"XMP::StringInputMethod;TcRDoc::NormalClass0

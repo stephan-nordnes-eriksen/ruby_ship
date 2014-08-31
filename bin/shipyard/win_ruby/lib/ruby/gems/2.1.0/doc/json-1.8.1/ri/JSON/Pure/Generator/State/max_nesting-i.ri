@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"max_nesting:ETI"-JSON::Pure::Generator::State#max_nesting;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThis integer returns the maximum level of data structure nesting in ;TI"Bthe generated JSON, max_nesting = 0 if no maximum is checked.;T:
+@fileI"lib/json/pure/generator.rb;T:0@omit_headings_from_table_of_contents_below0F@I"!JSON::Pure::Generator::State;FcRDoc::NormalClass0

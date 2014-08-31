@@ -1,0 +1,3 @@
+C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/bin/ruby.exe mkrf_conf.rb
+
+C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/bin/ruby.exe -rubygems C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/lib/ruby/gems/2.1.0/gems/rake-10.1.0/bin/rake RUBYARCHDIR=C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/lib/ruby/gems/2.1.0/extensions/x86-mingw32/2.1.0/konjekt_client-0.0.1 RUBYLIBDIR=C:/Users/Stephan_2/Documents/GitHub/ruby_ship/bin/shipyard/win_ruby/lib/ruby/gems/2.1.0/extensions/x86-mingw32/2.1.0/konjekt_client-0.0.1

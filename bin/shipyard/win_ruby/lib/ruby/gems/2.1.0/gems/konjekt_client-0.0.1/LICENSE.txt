@@ -1,0 +1,5 @@
+Copyright (c) 2014 Stephan Nordnes Eriksen - All Rights Reserved
+
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+Written by Stephan Nordnes Eriksen <stephanruler@gmail.com>, December 2013

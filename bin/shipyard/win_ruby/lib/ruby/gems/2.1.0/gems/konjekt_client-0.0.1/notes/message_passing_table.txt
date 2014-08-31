@@ -1,0 +1,93 @@
+* => Possiby several subclasses. MessageType* => possibly MessageTypeStandard, MessageTypeHard, MessageTypeEasy etc.
+
+
+|-----------------------------|---------------------|---------------------|--------------|
+|          Component          |        Sends        |       Receives      | Poss-Recieve |
+|-----------------------------|---------------------|---------------------|--------------|
+| FileIndexer                 | ServerMessageBuild* | FileChanged         | IndexFile    |
+|                             | FileIndexed         | FileAdded           |              |
+|                             |                     |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| FileSystemWatcher           | FileAdded           | FolderWatchAdd      |              |
+|                             | FileChanged         | FolderWatchRemove   |              |
+|                             | FileMoved           |                     |              |
+|                             | FileDeleted         |                     |              |
+|                             | FileRenamed         |                     |              |
+|                             | FileUnwatched       |                     |              |
+|                             | QueryBuild*         |                     |              |
+|                             | FileOpened(?)       |                     |              |
+|                             | FileClosed(?)       |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| ServerMessageBuilderBuilder | ServerMessageSend*  | ServerMessageBuild* |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| ServerConnector             | SearchResults*      | SendToServer*       |              |
+|                             | LoggedIn            | LogIn               |              |
+|                             | LoggedOut           | LogOut              |              |
+|                             | ConnectionLost      |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| GUI                         | LogIn               | SearchResults*      |              |
+|                             | LogOut              | LoggedIn            |              |
+|                             | FolderWatchAdd      | LoggedOut           |              |
+|                             | FolderWatchRemove   | ConnectionLost      |              |
+|                             | ServerMessageBuild* |                     |              |
+|                             | Recommend*          |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| RecommendationGenerator     | BuildQuery*         | Recommend           |              |
+|-----------------------------|---------------------|---------------------|--------------|
+| FileRegister                | FileNameToID        | FileLookupID        |              |
+|                             |                     | FileLookupName      |              |
+|                             |                     | FileIDAdd           |              |
+| #This is maybe a            |                     | FileMoved           |              |
+| Producer that answers       |                     | FileRenamed         |              |
+| stuff like FileLookup       |                     | FileDeleted         |              |
+|                             |                     |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+|                             |                     |                     |              |
+|-----------------------------|---------------------|---------------------|--------------|
+
+
+
+
+Maybe-components:
+
+	QueryCacher
+
+
+|-----------------------|--------------------------------------------|
+|      Message Type     |                Data Format                 |
+|-----------------------|--------------------------------------------|
+| FileAdded             | "FilePath"                                 |
+| FileChanged           | "FilePath"                                 |
+| FileMoved             | ["FromPath","ToPath"]                      |
+| FileDeleted           | "FilePath"                                 |
+| FileRenamed           | ["FromPath","ToPath"]                      |
+| FileUnwatched         | "FilePath"                                 |
+| FileOpened            | "FilePath"                                 |
+| FileClosed            | "FilePath"                                 |
+| FileIndexed           | ["FilePath", ?IndexData]                   |
+| ServerMessageBuild    | ?(Maybe this should be done on the server) |
+| SendToServer          | ?"Query"                                   |
+| SearchResults         | ["Query", "ResultData"]                    |
+| LoggedIn              | ["Username", time]                         |
+| LoggedOut             | ["Username", time]                         |
+| LogIn                 | ["Username", "password"]                   |
+| LogOut                | ?"Username"/true                           |
+| ConnectionLost        | nil                                        |
+| FolderWatchAdd        | "FolderPath"                               |
+| FolderWatchRemove     | "FolderPath"                               |
+| RecommendFilesRequest | nil                                        |
+| RecommendFiles        | [["open_file_1",...], DateTime, Location]  |
+| FileNameToID          | ["FilePath", ID]                           |
+| FileLookupID          | ID                                         |
+| FileLookupName        | "FilePath"                                 |
+| FileIDAdd             | ["FilePath", ID]                           |
+|-----------------------|--------------------------------------------|
+
+
+
+Thoughts:
+
+	BuildQuery should not be named as such. We should only send messages that mean somethign,
+	like "SearchByText", "SearchByKeywords", "UpdateFileIndex" and so forth.
+
+	Generally: Have message type be descriptive of what happened.

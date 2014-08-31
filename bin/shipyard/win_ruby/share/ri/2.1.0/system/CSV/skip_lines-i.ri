@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"skip_lines:ETI"CSV#skip_lines;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"DThe regex marking a line as a comment. See CSV::new for details;T:
-@fileI"lib/csv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CSV;TcRDoc::NormalClass0

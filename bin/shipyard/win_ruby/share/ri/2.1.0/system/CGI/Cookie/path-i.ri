@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"	path:ETI"CGI::Cookie#path;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6Path for which this cookie applies, as a +String+;T:
-@fileI"lib/cgi/cookie.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CGI::Cookie;TcRDoc::NormalClass0

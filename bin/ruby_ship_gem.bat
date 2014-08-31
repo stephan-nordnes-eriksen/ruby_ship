@@ -1,2 +1,2 @@
-@echo off
-%~dp0/win_gem.bat %*
+@echo off 
+%~dp0\shipyard\win_gem.bat %* 

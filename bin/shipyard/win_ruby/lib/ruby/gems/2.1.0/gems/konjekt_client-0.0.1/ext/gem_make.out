@@ -1,0 +1,8 @@
+/Users/stephannordneseriksen/.rvm/rubies/ruby-1.8.7-p374/bin/ruby mkrf_conf.rb 
+
+rake RUBYARCHDIR=/Users/stephannordneseriksen/Dropbox/Programming/Ruby/konjekt_client/lib RUBYLIBDIR=/Users/stephannordneseriksen/Dropbox/Programming/Ruby/konjekt_client/lib
+/Users/stephannordneseriksen/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/dependency.rb:296:in `to_specs': Could not find 'rake' (>= 0) among 18 total gem(s) (Gem::LoadError)
+	from /Users/stephannordneseriksen/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/dependency.rb:307:in `to_spec'
+	from /Users/stephannordneseriksen/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/core_ext/kernel_gem.rb:47:in `gem'
+	from /Users/stephannordneseriksen/.rvm/gems/ruby-1.8.7-p374/bin/rake:22
+	from /Users/stephannordneseriksen/.rvm/gems/ruby-1.8.7-p374/bin/ruby_executable_hooks:15
