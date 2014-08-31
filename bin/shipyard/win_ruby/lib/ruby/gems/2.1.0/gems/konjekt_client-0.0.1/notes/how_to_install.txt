@@ -1,8 +1,0 @@
-gem install -i ../Resources/ruby/gems/ruby/1.8/ /Users/stephannordneseriksen/Dropbox/Programming/Ruby/konjekt_client/konjekt_client-0.0.1.gem --no-rdoc --no-ri
-
-cd /Users/stephannordneseriksen/Dropbox/Programming/Ruby/konjekt_client; rvm use 1.8; gem build konjekt_client.gemspec; cd -; rvm use 1.8; gem install -i ../Resources/ruby/gems/ruby/1.8/ /Users/stephannordneseriksen/Dropbox/Programming/Ruby/konjekt_client/konjekt_client-0.0.1.gem --no-rdoc --no-ri
-
-
-windows:
-
-cd C:\Users\Stephan_2\Documents\GitHub\konjekt_client & pik use 1.8 & gem build konjekt_client.gemspec & cd C:\Users\Stephan_2\Documents\GitHub\konjekt_tidesdk\source & pik use 1.8 & gem install -i ..\Resources\ruby\gems\ruby\1.8\ C:\Users\Stephan_2\Documents\GitHub\konjekt_client\konjekt_client-0.0.1.gem --no-rdoc --no-ri
