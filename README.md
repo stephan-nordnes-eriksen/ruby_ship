@@ -55,7 +55,7 @@ path/to/bin/ruby_ship_gem.sh list
 
 ## Current pre-bundled versions of Ruby:
 
-- Windows: 2.1.2p95 - Outdated + bugs. Rebuild
+- Windows: 2.1.2p95 - Working
 - Darwin (aka. OSx): 2.1.2p95 - Working
 - Linux (Ubuntu): 2.1.2p95 - Working
 - More platforms coming. 
@@ -71,6 +71,7 @@ Getting a new version of ruby is super-easy! Go to https://www.ruby-lang.org/en/
 
 
  **(Windows build script is currently broken)**
+ Building for windows requires the use of [ruby one click installer](https://github.com/oneclick/rubyinstaller/). See [issue 3](https://github.com/stephan-nordnes-eriksen/ruby_ship/issues/3) for explanation and how to build other versions on windows.
 ```
 ::For windows
 ::CURRENTLY BROKEN *sad-face* /tools/ruby_ship_build.bat path/to/source/ruby-X.Y.Z.tar.gz
