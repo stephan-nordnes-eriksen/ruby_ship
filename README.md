@@ -77,6 +77,14 @@ Getting a new version of ruby is super-easy! Go to https://www.ruby-lang.org/en/
 ::CURRENTLY BROKEN *sad-face* /tools/ruby_ship_build.bat path/to/source/ruby-X.Y.Z.tar.gz
 ```
 
+
+#On OSx you have to relink quite a few dylibs to make it truly portable. This can be done by the supplied `auto_relink_dylib.rb`. This script will copy all needed dylibs into ruby_ship and then relink them, recursively adding any deeper dependencies. It is the only way to make ruby truly portable on the OSx platform. It is important that this script is run from the root of the directory, or else there will be mismatches of the directories.
+
+```
+ruby tools/auto_relink_dylibs.rb
+#This can possibly be bin/ruby_ship.sh, but I would advice against it as it will modify itself.
+```
+
 Thats it!
 
 Now you can use your ruby_ship.sh/.bat with your newly compiled ruby version! The best part is: You can copy this environment (the entire folder) wherever you want, and it will still work! Ship it with your product, place it on a USB, or do whatever you want with it! No need to install ruby ever again!
