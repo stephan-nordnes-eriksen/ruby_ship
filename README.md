@@ -56,7 +56,7 @@ path/to/bin/ruby_ship_gem.sh list
 ## Current pre-bundled versions of Ruby:
 
 - Windows: 2.1.2p95 - Working
-- Darwin (aka. OSx): 2.1.2p95 - Working
+- Darwin (aka. OSx): 2.1.5p273 - Working
 - Linux (Ubuntu): 2.1.2p95 - Working
 - More platforms coming. 
 
