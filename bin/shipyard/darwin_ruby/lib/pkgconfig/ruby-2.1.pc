@@ -1,4 +1,4 @@
-arch=x86_64-darwin13.0
+arch=x86_64-darwin14.0
 sitearch=${arch}
 prefix=/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby
 exec_prefix=${prefix}
@@ -9,7 +9,7 @@ MAJOR=2
 MINOR=1
 TEENY=0
 ruby_version=2.1.0
-RUBY_PROGRAM_VERSION=2.1.2
+RUBY_PROGRAM_VERSION=2.1.5
 RUBY_BASE_NAME=ruby
 RUBY_VERSION_NAME=${RUBY_BASE_NAME}-${ruby_version}
 RUBY_SO_NAME=${RUBY_BASE_NAME}

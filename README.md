@@ -55,8 +55,8 @@ path/to/bin/ruby_ship_gem.sh list
 
 ## Current pre-bundled versions of Ruby:
 
-- Windows: 2.1.2p95 - Outdated + bugs. Rebuild
-- Darwin (aka. OSx): 2.1.2p95 - Working
+- Windows: 2.1.2p95 - Working
+- Darwin (aka. OSx): 2.1.5p273 - Working
 - Linux (Ubuntu): 2.1.2p95 - Working
 - More platforms coming. 
 
@@ -71,9 +71,18 @@ Getting a new version of ruby is super-easy! Go to https://www.ruby-lang.org/en/
 
 
  **(Windows build script is currently broken)**
+ Building for windows requires the use of [ruby one click installer](https://github.com/oneclick/rubyinstaller/). See [issue 3](https://github.com/stephan-nordnes-eriksen/ruby_ship/issues/3) for explanation and how to build other versions on windows.
 ```
 ::For windows
 ::CURRENTLY BROKEN *sad-face* /tools/ruby_ship_build.bat path/to/source/ruby-X.Y.Z.tar.gz
+```
+
+**OSx specific:**
+On OSx you have to relink quite a few dylibs to make it truly portable. This can be done by the supplied `auto_relink_dylib.rb`. This script will copy all needed dylibs into ruby_ship and then relink them, recursively adding any deeper dependencies. It is the only way to make ruby truly portable on the OSx platform. It is important that this script is run from the root of the directory, or else there will be mismatches of the directories.
+
+```
+ruby tools/auto_relink_dylibs.rb
+#This can possibly be run with bin/ruby_ship.sh in stead of ruby, but I would advice against it as it will modify itself.
 ```
 
 Thats it!
