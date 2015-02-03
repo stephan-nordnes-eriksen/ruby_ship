@@ -13,10 +13,10 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86
 echo Compiling and installing Ruby
 
 :: PRE INSTALL CLEANUP
-rm -rf %~dp0/../bin/win_ruby
+::rm -rf %~dp0/../bin/win_ruby
 rm -rf %~dp0/extracted_ruby
 mkdir %~dp0/extracted_ruby
-mkdir %~dp0/../bin/win_ruby
+::mkdir %~dp0/../bin/win_ruby
 
 :: UNZIP SOURCE
 7z x %~f1 -so | 7z x -aoa -si -ttar -o"%~dp0/extracted_ruby"
@@ -28,6 +28,18 @@ for /f %%i in ('echo %RUBYDIR% ^| cut -d'-' -f 2') do set RUBY_VERSION=%%i
 echo ############################
 echo Ruby Ship is Installing Ruby version %RUBY_VERSION%
 echo ############################
+
+
+::EDITING ext/Setup FILE FOR WINDOWS
+::%~dp0\win_helpers\fart.exe -- %~dp0extracted_ruby\%RUBYDIR%\ext\Setup #zlib zlib
+::%~dp0\win_helpers\fart.exe -- %~dp0extracted_ruby\%RUBYDIR%\ext\Setup #Win32API Win32API
+::%~dp0\win_helpers\fart.exe -- %~dp0extracted_ruby\%RUBYDIR%\ext\Setup #win32ole win32ole
+
+:: WINDOWS SPECIFIC ENV VARIABLES
+SET LIB=%LIB%; %~dp0zlib\lib
+SET INCLUDE=%INCLUDE%; %~dp0zlib\include
+		
+
 
 :: BUILDING RUBY
 cd "%~dp0/extracted_ruby/%RUBYDIR%"
