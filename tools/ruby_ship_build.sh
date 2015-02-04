@@ -222,6 +222,10 @@ chmod a+x $DIR/../bin/shipyard/${OS}_bundler.sh
 #CLEAN UP AFTER EXTRACTION
 rm -rf $DIR/extracted_ruby
 
+#RUNNINNG DYLIB RELINKER ON OSX.
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	ruby $DIR/auto_relink_dylibs.rb
+fi
 
 #NOTIFY USER ON HOW TO USE RUBY SHIP
 echo "############################"
@@ -231,3 +235,4 @@ echo "Ruby Ship finished installing Ruby $RUBY_VERSION!"
 echo "Run scripts by using the bin/ruby_ship.sh as you would use the normal ruby command."
 echo "Eg.: bin/ruby_ship.sh -v"
 echo "=> ruby $RUBY_VERSION..."
+
