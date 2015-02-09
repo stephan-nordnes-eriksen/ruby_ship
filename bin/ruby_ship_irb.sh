@@ -15,4 +15,4 @@ else
 fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-SSL_CERT_FILE=./bin/shipyard/cacerts.pem "${DIR}/shipyard/${OS}_irb.sh" "$@"
+SSL_CERT_FILE="${DIR}/shipyard/cacerts.pem" "${DIR}/shipyard/${OS}_irb.sh" "$@"
