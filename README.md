@@ -1,6 +1,8 @@
 Ruby Ship
 =========
 
+[![Join the chat at https://gitter.im/stephan-nordnes-eriksen/ruby_ship](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stephan-nordnes-eriksen/ruby_ship?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Portable Ruby environment on any platform, with any version of MRI Ruby! No need to install Ruby on a computer to use it any more! 
 
 The goal of Ruby Ship is to have a single folder containing Ruby, which is portable on all platforms. You can put this folder wherever you like and still be able to use the Ruby version on it. Put it on a USB stick if you like for all your Ruby-on-the-go needs!
