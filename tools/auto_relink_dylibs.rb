@@ -1,5 +1,5 @@
 require "fileutils"
-require "pry"
+
 @new_dylib_path = File.join("bin", "shipyard", "darwin_ruby", "dylibs")
 
 @current_dir = FileUtils.pwd
