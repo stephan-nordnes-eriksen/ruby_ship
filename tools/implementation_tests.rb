@@ -61,6 +61,15 @@ tests << {
 	:info => "Testing that rubygems will load and that there are at least one rubygem installed."
 }
 
+tests << {
+	:method => lambda { 
+		require 'digest'
+
+
+	},
+	:info => "See if the libcrypto dylib is linked correctly"
+}
+
 #
 # RUNNING TESTS
 #
