@@ -133,7 +133,13 @@ echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_gem.sh
 echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_gem.sh
 echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_gem.sh
 echo "\"\${DIR}/${OS}_ruby/bin/gem\" \"\$@\"" >> $DIR/../bin/shipyard/${OS}_gem.sh
-
+if [[ "$OS" == "darwin" ]]; then
+	echo "if [[ \"\$1\" == \"install\" ]]; then" >> $DIR/../bin/shipyard/${OS}_gem.sh
+	echo "  cd \"\${DIR}/../../\"" >> $DIR/../bin/shipyard/${OS}_gem.sh
+	echo "  ruby \"./tools/auto_relink_dylibs.rb\"" >> $DIR/../bin/shipyard/${OS}_gem.sh
+	echo "fi" >> $DIR/../bin/shipyard/${OS}_gem.sh
+	# echo "echo \"Remember to run 'ruby tools/auto_relink_dylibs.rb' after you install new gems\"" >> $DIR/../bin/shipyard/${OS}_gem.sh
+fi
 #erb command script:
 echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_erb.sh
 echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_erb.sh
