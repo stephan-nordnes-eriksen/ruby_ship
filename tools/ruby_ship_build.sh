@@ -183,23 +183,27 @@ if [[ "$OS" == "darwin" ]]; then
 	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
 	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
 	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
-	echo "\${DIR}/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "\"\${DIR}/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundle\" \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "if [ \"\$1\" == \"install\" ] || [ \"\$1\" == \"update\"]; then" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "  cd \"\${DIR}/../../\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "  ruby \"./tools/auto_relink_dylibs.rb\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "fi" >> $DIR/../bin/shipyard/${OS}_bundle.sh
 	#bundler command script darwin:
 	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
 	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
 	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
-	echo "\${DIR}/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "\"\${DIR}/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/bin/bundler\" \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
 else
 	#bundle command script:
 	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundle.sh
 	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
 	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundle.sh
-	echo "\${DIR}/${OS}_ruby/bin/bundle \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
+	echo "\"\${DIR}/${OS}_ruby/bin/bundle\" \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundle.sh
 	#bundler command script:
 	echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_bundler.sh
 	echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
 	echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_bundler.sh
-	echo "\${DIR}/${OS}_ruby/bin/bundler \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
+	echo "\"\${DIR}/${OS}_ruby/bin/bundler\" \"\$@\"" >> $DIR/../bin/shipyard/${OS}_bundler.sh
 fi
 
 chmod a+x $DIR/../bin/ruby_ship.sh
