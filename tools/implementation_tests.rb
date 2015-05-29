@@ -70,6 +70,15 @@ tests << {
 	:info => "See if the libcrypto dylib is linked correctly"
 }
 
+tests << {
+	:method => lambda { 
+		require 'bundler'
+		
+		Bundler.ruby_version
+	},
+	:info => "Test if bundler is installed"
+}
+
 #
 # RUNNING TESTS
 #
