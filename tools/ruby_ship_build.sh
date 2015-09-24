@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #VERIFY PARAMETERS
 if [ $# -eq 0 ]
   then
@@ -16,7 +17,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
 	OS="cygwin"
 elif [[ "$OSTYPE" == "win32" ]]; then
 	OS="win32"
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
+elif [[ "$OSTYPE" == "FreeBSD"* ]]; then
 	OS="freebsd"
 fi
 
