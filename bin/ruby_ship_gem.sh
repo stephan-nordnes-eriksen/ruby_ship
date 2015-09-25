@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 OS="unknown"
 if [[ "$OSTYPE" == "linux"* ]]; then
 	OS="linux"
@@ -7,7 +8,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
 	OS="win"
 elif [[ "$OSTYPE" == "win32" ]]; then
 	OS="win"
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
+elif [[ "$OSTYPE" == "FreeBSD"* ]]; then
 	OS="freebsd"
 else
 	echo "OS not compatible"
