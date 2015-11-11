@@ -222,7 +222,7 @@ chmod a+x $DIR/../bin/shipyard/${OS}_ruby.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_gem.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_erb.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_irb.sh
-chmod a+x $DIR/../bin/shipyar.d/${OS}_rake.sh
+chmod a+x $DIR/../bin/shipyard/${OS}_rake.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_rdoc.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_ri.sh
 chmod a+x $DIR/../bin/shipyard/${OS}_testrb.sh
