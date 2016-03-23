@@ -1,0 +1,3 @@
+U:RDoc::AnyMethod[iI"set_last_value:EFI" IRB::Context#set_last_value;TF:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MSets the return value from the last statement evaluated in this context ;TI"to #last_value.;T:
+@fileI"lib/irb/context.rb;T:0@omit_headings_from_table_of_contents_below000[[I"_set_last_value;Fo;;	[o;
+;	[I"See #set_last_value;T;I"lib/irb/ext/history.rb;T;0I"(value);T@FI"Context;TcRDoc::NormalClass00

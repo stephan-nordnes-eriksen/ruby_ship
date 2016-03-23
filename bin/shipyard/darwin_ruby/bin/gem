@@ -1,6 +1,6 @@
 #!/bin/sh
 # -*- ruby -*-
-bindir=`cd -P "${0%/*}" 2>/dev/null; pwd`
+bindir="${0%/*}"
 exec "$bindir/ruby" -x "$0" "$@"
 #!/usr/bin/env ruby
 #--

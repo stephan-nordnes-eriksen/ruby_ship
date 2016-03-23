@@ -2,7 +2,7 @@
 #
 # Author:: Akira Yamada <akira@ruby-lang.org>
 # License:: You can redistribute it and/or modify it under the same term as Ruby.
-# Revision:: $Id: generic.rb 43918 2013-11-29 14:43:01Z a_matsuda $
+# Revision:: $Id: generic.rb 49907 2015-03-09 13:00:13Z nagachika $
 #
 # See URI for general documentation
 #
@@ -192,7 +192,7 @@ module URI
       if arg_check
         self.scheme = scheme
         self.userinfo = userinfo
-        self.host = host
+        self.hostname = host
         self.port = port
         self.path = path
         self.query = query

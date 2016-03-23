@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"errors:ETI"-Gem::UnsatisfiableDependencyError#errors;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"DErrors encountered which may have contributed to this exception;T:
+@fileI"lib/rubygems/exceptions.rb;T:0@omit_headings_from_table_of_contents_below0F@I"&Gem::UnsatisfiableDependencyError;TcRDoc::NormalClass0

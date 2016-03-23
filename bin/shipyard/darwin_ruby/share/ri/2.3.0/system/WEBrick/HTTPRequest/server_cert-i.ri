@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"server_cert:ETI"%WEBrick::HTTPRequest#server_cert;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"$HTTP request server certificate;T:
+@fileI"lib/webrick/https.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPRequest;TcRDoc::NormalClass0

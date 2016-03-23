@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"unknown:ETI"!DRb::DRbUnknownError#unknown;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",Get the wrapped DRb::DRbUnknown object.;T:
+@fileI"lib/drb/drb.rb;T:0@omit_headings_from_table_of_contents_below0F@I"DRb::DRbUnknownError;TcRDoc::NormalClass0

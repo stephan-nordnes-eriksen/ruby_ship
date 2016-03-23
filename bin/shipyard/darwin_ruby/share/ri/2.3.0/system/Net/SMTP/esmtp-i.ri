@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"
+esmtp:ETI"Net::SMTP#esmtp;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[
+I"BSet whether to use ESMTP or not.  This should be done before ;TI"Ccalling #start.  Note that if #start is called in ESMTP mode, ;TI"?and the connection fails due to a ProtocolError, the SMTP ;TI"=object will automatically switch to plain SMTP mode and ;TI" retry (but not vice versa).;T:
+@fileI"lib/net/smtp.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::SMTP;TcRDoc::NormalClass0

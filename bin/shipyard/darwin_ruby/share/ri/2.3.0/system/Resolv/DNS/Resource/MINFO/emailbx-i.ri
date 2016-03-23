@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"emailbx:ETI")Resolv::DNS::Resource::MINFO#emailbx;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KMailbox to use for error messages related to the mail list or mailbox.;T:
+@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"!Resolv::DNS::Resource::MINFO;TcRDoc::NormalClass0

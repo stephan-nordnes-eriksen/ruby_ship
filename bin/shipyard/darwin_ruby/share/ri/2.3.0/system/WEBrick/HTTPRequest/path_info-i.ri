@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"path_info:ETI"#WEBrick::HTTPRequest#path_info;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"!The path info (CGI variable);T:
+@fileI"lib/webrick/httprequest.rb;T:0@omit_headings_from_table_of_contents_below0F@I"WEBrick::HTTPRequest;TcRDoc::NormalClassI"Request-URI;T

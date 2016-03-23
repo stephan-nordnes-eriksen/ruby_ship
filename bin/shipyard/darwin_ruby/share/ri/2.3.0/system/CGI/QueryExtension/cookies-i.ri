@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"cookies:ETI" CGI::QueryExtension#cookies;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"<Get the cookies as a hash of cookie-name=>Cookie pairs.;T:
+@fileI"lib/cgi/core.rb;T:0@omit_headings_from_table_of_contents_below0F@I"CGI::QueryExtension;TcRDoc::NormalModule0

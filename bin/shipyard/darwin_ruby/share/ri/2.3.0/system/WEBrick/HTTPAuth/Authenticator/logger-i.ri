@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"logger:ETI",WEBrick::HTTPAuth::Authenticator#logger;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&The logger for this authenticator;T:
+@fileI"*lib/webrick/httpauth/authenticator.rb;T:0@omit_headings_from_table_of_contents_below0F@I"%WEBrick::HTTPAuth::Authenticator;TcRDoc::NormalModule0

@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"	meta:ETI"OpenURI::Meta#meta;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[
+I"3returns a Hash that represents header fields. ;TI"7The Hash keys are downcased for canonicalization. ;TI"'The Hash values are a field body. ;TI"7If there are multiple field with same field name, ;TI"4the field values are concatenated with a comma.;T:
+@fileI"lib/open-uri.rb;T:0@omit_headings_from_table_of_contents_below0F@I"OpenURI::Meta;TcRDoc::NormalModule0

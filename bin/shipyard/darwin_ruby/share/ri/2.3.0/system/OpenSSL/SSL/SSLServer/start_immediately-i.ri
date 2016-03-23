@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"start_immediately:ETI".OpenSSL::SSL::SSLServer#start_immediately;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FWhen true then #accept works exactly the same as TCPServer#accept;T:
+@fileI"#ext/openssl/lib/openssl/ssl.rb;T:0@omit_headings_from_table_of_contents_below0F@I"OpenSSL::SSL::SSLServer;TcRDoc::NormalClass0

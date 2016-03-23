@@ -3,8 +3,8 @@
 # changes made to this file will be lost the next time ruby is built.
 
 module RbConfig
-  RUBY_VERSION == "2.1.5" or
-    raise "ruby lib version (2.1.5) doesn't match executable version (#{RUBY_VERSION})"
+  RUBY_VERSION == "2.1.6" or
+    raise "ruby lib version (2.1.6) doesn't match executable version (#{RUBY_VERSION})"
 
   TOPDIR = File.dirname(__FILE__).chomp!("/lib/ruby/2.1.0/x86_64-darwin14.0")
   DESTDIR = '' unless defined? DESTDIR
@@ -13,10 +13,10 @@ module RbConfig
   CONFIG["MAJOR"] = "2"
   CONFIG["MINOR"] = "1"
   CONFIG["TEENY"] = "0"
-  CONFIG["PATCHLEVEL"] = "273"
+  CONFIG["PATCHLEVEL"] = "336"
   CONFIG["INSTALL"] = '/usr/bin/install -c'
   CONFIG["EXEEXT"] = ""
-  CONFIG["prefix"] = (TOPDIR || DESTDIR + "/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby")
+  CONFIG["prefix"] = (TOPDIR || DESTDIR + "/Users/stephan/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby")
   CONFIG["ruby_install_name"] = "ruby"
   CONFIG["RUBY_INSTALL_NAME"] = "ruby"
   CONFIG["RUBY_SO_NAME"] = "ruby"
@@ -36,7 +36,7 @@ module RbConfig
   CONFIG["RUBY_SEARCH_PATH"] = ""
   CONFIG["UNIVERSAL_INTS"] = ""
   CONFIG["UNIVERSAL_ARCHNAMES"] = ""
-  CONFIG["configure_args"] = " '--enable-load-relative' '--prefix=/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby' '--with-opt-dir=/usr/local/opt/openssl:/usr/local/opt/readline:/usr/local/opt/libyaml:/usr/local/Cellar/gdbm/1.11:/usr/local/opt/libffi'"
+  CONFIG["configure_args"] = " '--enable-load-relative' '--prefix=/Users/stephan/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby' '--with-opt-dir=/usr/local/opt/openssl:/usr/local/Cellar/readline/6.3.8:/usr/local/Cellar/libyaml/0.1.6_1:/usr/local/Cellar/gdbm/1.11:/usr/local/Cellar/libffi/3.0.13'"
   CONFIG["vendorarchdir"] = "$(vendorlibdir)/$(sitearch)"
   CONFIG["vendorlibdir"] = "$(vendordir)/$(ruby_version)"
   CONFIG["vendordir"] = "$(rubylibprefix)/vendor_ruby"
@@ -124,7 +124,7 @@ module RbConfig
   CONFIG["CCDLFLAGS"] = "-fno-common"
   CONFIG["STATIC"] = ""
   CONFIG["ARCH_FLAG"] = ""
-  CONFIG["DLDFLAGS"] = "-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libyaml/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/opt/libffi/lib "
+  CONFIG["DLDFLAGS"] = "-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/Cellar/readline/6.3.8/lib -L/usr/local/Cellar/libyaml/0.1.6_1/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/Cellar/libffi/3.0.13/lib "
   CONFIG["ALLOCA"] = ""
   CONFIG["codesign"] = "codesign"
   CONFIG["POSTLINK"] = "test -z '$(RUBY_CODESIGN)' || codesign -s '$(RUBY_CODESIGN)' -f $@"
@@ -138,7 +138,7 @@ module RbConfig
   CONFIG["PKG_CONFIG"] = "pkg-config"
   CONFIG["PYTHON"] = ""
   CONFIG["DOXYGEN"] = ""
-  CONFIG["DOT"] = "dot"
+  CONFIG["DOT"] = ""
   CONFIG["DTRACE"] = "dtrace"
   CONFIG["MAKEDIRS"] = "mkdir -p"
   CONFIG["MKDIR_P"] = "mkdir -p"
@@ -170,8 +170,8 @@ module RbConfig
   CONFIG["CXXFLAGS"] = "$(cxxflags)"
   CONFIG["CXX"] = "g++"
   CONFIG["OBJEXT"] = "o"
-  CONFIG["CPPFLAGS"] = " -I/usr/local/opt/openssl/include -I/usr/local/opt/readline/include -I/usr/local/opt/libyaml/include -I/usr/local/Cellar/gdbm/1.11/include -I/usr/local/opt/libffi/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)"
-  CONFIG["LDFLAGS"] = "-L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libyaml/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/opt/libffi/lib "
+  CONFIG["CPPFLAGS"] = " -I/usr/local/opt/openssl/include -I/usr/local/Cellar/readline/6.3.8/include -I/usr/local/Cellar/libyaml/0.1.6_1/include -I/usr/local/Cellar/gdbm/1.11/include -I/usr/local/Cellar/libffi/3.0.13/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)"
+  CONFIG["LDFLAGS"] = "-L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/openssl/lib -L/usr/local/Cellar/readline/6.3.8/lib -L/usr/local/Cellar/libyaml/0.1.6_1/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/Cellar/libffi/3.0.13/lib "
   CONFIG["CFLAGS"] = "$(cflags)  -pipe"
   CONFIG["CC"] = "clang"
   CONFIG["NACL_SDK_VARIANT"] = ""
@@ -181,19 +181,19 @@ module RbConfig
   CONFIG["target_vendor"] = "apple"
   CONFIG["target_cpu"] = "x86_64"
   CONFIG["target"] = "x86_64-apple-darwin14.0"
-  CONFIG["host_os"] = "darwin14.1.0"
+  CONFIG["host_os"] = "darwin14.3.0"
   CONFIG["host_vendor"] = "apple"
   CONFIG["host_cpu"] = "x86_64"
-  CONFIG["host"] = "x86_64-apple-darwin14.1.0"
+  CONFIG["host"] = "x86_64-apple-darwin14.3.0"
   CONFIG["RUBY_VERSION_NAME"] = "$(RUBY_BASE_NAME)-$(ruby_version)"
   CONFIG["RUBYW_BASE_NAME"] = "rubyw"
   CONFIG["RUBY_BASE_NAME"] = "ruby"
-  CONFIG["build_os"] = "darwin14.1.0"
+  CONFIG["build_os"] = "darwin14.3.0"
   CONFIG["build_vendor"] = "apple"
   CONFIG["build_cpu"] = "x86_64"
-  CONFIG["build"] = "x86_64-apple-darwin14.1.0"
-  CONFIG["RUBY_RELEASE_DATE"] = "2014-11-13"
-  CONFIG["RUBY_PROGRAM_VERSION"] = "2.1.5"
+  CONFIG["build"] = "x86_64-apple-darwin14.3.0"
+  CONFIG["RUBY_RELEASE_DATE"] = "2015-04-13"
+  CONFIG["RUBY_PROGRAM_VERSION"] = "2.1.6"
   CONFIG["target_alias"] = ""
   CONFIG["host_alias"] = ""
   CONFIG["build_alias"] = ""

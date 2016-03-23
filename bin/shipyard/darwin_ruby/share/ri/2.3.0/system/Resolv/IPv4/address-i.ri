@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"address:ETI"Resolv::IPv4#address;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&The raw IPv4 address as a String.;T:
+@fileI"lib/resolv.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Resolv::IPv4;TcRDoc::NormalClass0

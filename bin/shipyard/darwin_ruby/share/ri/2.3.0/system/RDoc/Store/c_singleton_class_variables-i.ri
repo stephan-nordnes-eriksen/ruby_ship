@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI" c_singleton_class_variables:ETI",RDoc::Store#c_singleton_class_variables;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FMaps C variables to singleton class names for each parsed C file.;T:
+@fileI"lib/rdoc/store.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RDoc::Store;TcRDoc::NormalClass0

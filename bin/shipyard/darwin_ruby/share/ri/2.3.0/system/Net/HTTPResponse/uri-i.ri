@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"uri:ETI"Net::HTTPResponse#uri;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe URI used to fetch this response.  The response URI is only available ;TI"-if a URI was used to create the request.;T:
+@fileI"lib/net/http/response.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::HTTPResponse;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"load_modules:ETI"IRB::Context#load_modules;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"?A copy of the default <code>IRB.conf[:LOAD_MODULES]</code>;T:
+@fileI"lib/irb/context.rb;T:0@omit_headings_from_table_of_contents_below0F@I"IRB::Context;TcRDoc::NormalClass0

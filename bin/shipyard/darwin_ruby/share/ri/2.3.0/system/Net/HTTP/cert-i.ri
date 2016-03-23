@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	cert:ETI"Net::HTTP#cert;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FSets an OpenSSL::X509::Certificate object as client certificate. ;TI"C(This method is appeared in Michal Rokos's OpenSSL extension).;T:
+@fileI"lib/net/http.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::HTTP;TcRDoc::NormalClass0

@@ -1,0 +1,4 @@
+U:RDoc::AnyMethod[iI"unescapeHTML:EFI"CGI::Util#unescapeHTML;TF:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1Unescape a string that has been HTML-escaped;To:RDoc::Markup::Verbatim;	[I"ACGI::unescapeHTML("Usage: foo &quot;bar&quot; &lt;baz&gt;")
+;TI"'   # => "Usage: foo \"bar\" <baz>";T:@format0:
+@fileI"lib/cgi/util.rb;T:0@omit_headings_from_table_of_contents_below000[[I"unescape_html;Fo;;	[o;
+;	[I"'Synonym for CGI::unescapeHTML(str);T;@;0I"(string);T@FI"	Util;FcRDoc::NormalModule00

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"keep_alive_timeout:ETI"!Net::HTTP#keep_alive_timeout;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I">Seconds to reuse the connection of the previous request. ;TI"<If the idle time is less than this Keep-Alive Timeout, ;TI"LNet::HTTP reuses the TCP/IP socket used by the previous communication. ;TI"$The default value is 2 seconds.;T:
+@fileI"lib/net/http.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::HTTP;TcRDoc::NormalClass0

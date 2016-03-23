@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"dependencies:ETI"CGem::Resolver::Molinillo::CircularDependencyError#dependencies;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::List:
+@type:
+LABEL:@items[o:RDoc::Markup::ListItem:@label[I"Set<Object>;T;	[o:RDoc::Markup::Paragraph;	[I"7the dependencies responsible for causing the error;T:
+@fileI"<lib/rubygems/resolver/molinillo/lib/molinillo/errors.rb;T:0@omit_headings_from_table_of_contents_below0F@I"6Gem::Resolver::Molinillo::CircularDependencyError;TcRDoc::NormalClass0

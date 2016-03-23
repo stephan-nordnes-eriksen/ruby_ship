@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"prerelease:ETI"Gem::RequestSet#prerelease;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":If true, allow dependencies to match prerelease gems.;T:
+@fileI" lib/rubygems/request_set.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Gem::RequestSet;TcRDoc::NormalClass0

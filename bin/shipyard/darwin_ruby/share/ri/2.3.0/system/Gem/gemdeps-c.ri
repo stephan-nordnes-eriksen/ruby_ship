@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"gemdeps:ETI"Gem::gemdeps;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HGemDependencyAPI object, which is set when .use_gemdeps is called. ;TI"8This contains all the information from the Gemfile.;T:
+@fileI"lib/rubygems.rb;T:0@omit_headings_from_table_of_contents_below0T@I"Gem;FcRDoc::NormalModule0

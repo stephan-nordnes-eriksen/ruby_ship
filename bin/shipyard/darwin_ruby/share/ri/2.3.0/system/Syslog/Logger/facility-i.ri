@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"facility:ETI"Syslog::Logger#facility;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"ZThe facility argument is used to specify what type of program is logging the message.;T:
+@fileI"$ext/syslog/lib/syslog/logger.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Syslog::Logger;TcRDoc::NormalClass0

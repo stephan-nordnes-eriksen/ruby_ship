@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"notifiers:ETI"/IRB::Notifier::CompositeNotifier#notifiers;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"#List of notifiers in the group;T:
+@fileI"lib/irb/notifier.rb;T:0@omit_headings_from_table_of_contents_below0F@I"%IRB::Notifier::CompositeNotifier;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"outgoing_edges:ETI"EGem::Resolver::Molinillo::DependencyGraph::Vertex#outgoing_edges;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"J@return [Array<Edge>] the edges of {#graph} that have `self` as their;To:RDoc::Markup::Verbatim;	[I"{Edge#origin};T:@format0:
+@fileI"Flib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph.rb;T:0@omit_headings_from_table_of_contents_below0F@I"6Gem::Resolver::Molinillo::DependencyGraph::Vertex;TcRDoc::NormalClass0

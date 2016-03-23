@@ -1,0 +1,4 @@
+U:RDoc::AnyMethod[iI"
+parse:EFI"RDoc::Markdown#parse;TF:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"8Parses <code>markdown</code> into an RDoc::Document;T:
+@fileI"lib/rdoc/markdown.rb;T:0@omit_headings_from_table_of_contents_below000[[I"peg_parse;Fo;;	[o;
+;	[I"#The internal kpeg parse method;T;@;0I"(markdown);T@FI"Markdown;TcRDoc::NormalClass00

@@ -1,6 +1,6 @@
 arch=x86_64-darwin14.0
 sitearch=${arch}
-prefix=/Users/stephannordneseriksen/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby
+prefix=/Users/stephan/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 libdir=${exec_prefix}/lib
@@ -9,7 +9,7 @@ MAJOR=2
 MINOR=1
 TEENY=0
 ruby_version=2.1.0
-RUBY_PROGRAM_VERSION=2.1.5
+RUBY_PROGRAM_VERSION=2.1.6
 RUBY_BASE_NAME=ruby
 RUBY_VERSION_NAME=${RUBY_BASE_NAME}-${ruby_version}
 RUBY_SO_NAME=${RUBY_BASE_NAME}
@@ -45,7 +45,7 @@ LIBRUBYARG_SHARED=
 LIBRUBYARG_STATIC=-l${RUBY_SO_NAME}-static -framework CoreFoundation
 LIBRUBYARG=${LIBRUBYARG_STATIC}
 LIBS=-lpthread -ldl -lobjc
-DLDFLAGS=-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libyaml/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/opt/libffi/lib 
+DLDFLAGS=-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/Cellar/readline/6.3.8/lib -L/usr/local/Cellar/libyaml/0.1.6_1/lib -L/usr/local/Cellar/gdbm/1.11/lib -L/usr/local/Cellar/libffi/3.0.13/lib 
 
 Name: Ruby
 Description: Object Oriented Script Language

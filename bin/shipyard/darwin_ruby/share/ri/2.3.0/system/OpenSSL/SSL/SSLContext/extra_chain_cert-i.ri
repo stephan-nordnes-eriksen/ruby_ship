@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"extra_chain_cert:ETI".OpenSSL::SSL::SSLContext#extra_chain_cert;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HAn Array of extra X509 certificates to be added to the certificate ;TI"chain.;T:
+@fileI"ext/openssl/ossl_ssl.c;T:0@omit_headings_from_table_of_contents_below0F@I"OpenSSL::SSL::SSLContext;TcRDoc::NormalClass0

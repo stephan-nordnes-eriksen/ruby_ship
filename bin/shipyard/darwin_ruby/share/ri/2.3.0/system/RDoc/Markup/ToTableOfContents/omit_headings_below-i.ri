@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"omit_headings_below:ETI"8RDoc::Markup::ToTableOfContents#omit_headings_below;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I";Omits headings with a level less than the given level.;T:
+@fileI",lib/rdoc/markup/to_table_of_contents.rb;T:0@omit_headings_from_table_of_contents_below0F@I"$RDoc::Markup::ToTableOfContents;TcRDoc::NormalClass0
