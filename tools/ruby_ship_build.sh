@@ -127,7 +127,7 @@ GEM_HOME_SETTER="GEM_HOME=\"\${DIR}/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/\
 echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_ruby.sh
 echo "$GEM_PATH_SETTER" >> $DIR/../bin/shipyard/${OS}_ruby.sh
 echo "$GEM_HOME_SETTER" >> $DIR/../bin/shipyard/${OS}_ruby.sh
-echo "\"\${DIR}/${OS}_ruby/bin/ruby\" \"\$@\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/\" -I \"\${DIR}/shipyard/${OS}_ruby/bin/\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/$RUBY_BINARY_INSTALL_DIR/\"" >> $DIR/../bin/shipyard/${OS}_ruby.sh
+echo "\"\${DIR}/${OS}_ruby/bin/ruby\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/gems/$RUBY_VERSION_DIR/\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/\" -I \"\${DIR}/shipyard/${OS}_ruby/bin/\" -I \"\${DIR}/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR/$RUBY_BINARY_INSTALL_DIR/\"" \"\$@\" >> $DIR/../bin/shipyard/${OS}_ruby.sh
 
 #gem command script:
 echo "$DIR_SETTER" > $DIR/../bin/shipyard/${OS}_gem.sh
