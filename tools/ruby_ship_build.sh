@@ -58,7 +58,7 @@ RUBY_VERSION_DIR="$(echo $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
 RUBY_BINARY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR | grep ${OS})"
 
 #SETTING UP COMMON WRAPPER COMPONENTS
-OS_SELECTOR=$'OS=\"unknown\"\nif [[ \"$OSTYPE\" == \"linux\"* ]]; then\n	OS=\"linux\"\nelif [[ \"$OSTYPE\" == \"darwin\"* ]]; then\n	OS=\"darwin\"\nelif [[ \"$OSTYPE\" == \"cygwin\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"win32\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"freebsd\"* ]]; then\n	OS=\"freebsd\"\nelse\n	echo \"OS not compatible\"\n	exit 1\nfi\n'
+OS_SELECTOR=$'#!/usr/bin/env bash\nOS=\"unknown\"\nif [[ \"$OSTYPE\" == \"linux\"* ]]; then\n	OS=\"linux\"\nelif [[ \"$OSTYPE\" == \"darwin\"* ]]; then\n	OS=\"darwin\"\nelif [[ \"$OSTYPE\" == \"cygwin\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"win32\" ]]; then\n	OS=\"win\"\nelif [[ \"$OSTYPE\" == \"FreeBSD\"* ]]; then\n	OS=\"freebsd\"\nelse\n	echo \"OS not compatible\"\n	exit 1\nfi\n'
 DIR_SETTER="DIR=\"\$( cd \"\$( dirname \"\${BASH_SOURCE[0]}\" )\" && pwd )\""
 
 
