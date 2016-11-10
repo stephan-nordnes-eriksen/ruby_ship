@@ -4,7 +4,7 @@
 #
 # Author:: Akira Yamada <akira@ruby-lang.org>
 # License:: You can redistribute it and/or modify it under the same term as Ruby.
-# Revision:: $Id: generic.rb 53111 2015-12-14 08:05:35Z hsbt $
+# Revision:: $Id: generic.rb 53536 2016-01-14 15:06:37Z naruse $
 #
 # See URI for general documentation
 #
@@ -1341,7 +1341,7 @@ module URI
     # Constructs String from URI
     #
     def to_s
-      str = String.new
+      str = ''.dup
       if @scheme
         str << @scheme
         str << ':'

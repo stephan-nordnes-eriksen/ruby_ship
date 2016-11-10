@@ -2,7 +2,7 @@
 
   ruby/ruby.h -
 
-  $Author: nobu $
+  $Author: naruse $
   created at: Thu Jun 10 14:26:32 JST 1993
 
   Copyright (C) 1993-2008 Yukihiro Matsumoto
@@ -24,6 +24,13 @@ extern "C" {
 #include "ruby/config.h"
 #ifdef RUBY_EXTCONF_H
 #include RUBY_EXTCONF_H
+#endif
+
+#if defined(__cplusplus)
+/* __builtin_choose_expr and __builtin_types_compatible aren't available
+ * on C++.  See https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html */
+# undef HAVE_BUILTIN___BUILTIN_CHOOSE_EXPR_CONSTANT_P
+# undef HAVE_BUILTIN___BUILTIN_TYPES_COMPATIBLE_P
 #endif
 
 #include "defines.h"

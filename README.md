@@ -58,7 +58,7 @@ path/to/bin/ruby_ship_gem.sh list
 ## Current pre-bundled versions of Ruby:
 
 - Windows: 2.1.2p95 - Working
-- Darwin (aka. OSx): 2.3.0p0 - Working
+- Darwin (aka. OSx): 2.3.1p112 - Working
 - Linux (Ubuntu): 2.1.2p95 - Working
 - More platforms coming. 
 
@@ -99,6 +99,10 @@ To build on *nix you need to have the following:
 
 - Build tools
 - (Maybe others. TBA)
+
+Darwin:
+	`brew install libffi`
+	
 
 To build on windows you need to have the following:
 

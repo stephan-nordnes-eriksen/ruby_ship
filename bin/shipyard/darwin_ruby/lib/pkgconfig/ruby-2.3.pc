@@ -1,4 +1,4 @@
-arch=x86_64-darwin15
+arch=x86_64-darwin16
 sitearch=${arch}
 prefix=/Users/stephan/Documents/github/ruby_ship/tools/../bin/shipyard/darwin_ruby
 exec_prefix=${prefix}
@@ -9,7 +9,7 @@ MAJOR=2
 MINOR=3
 TEENY=0
 ruby_version=2.3.0
-RUBY_PROGRAM_VERSION=2.3.0
+RUBY_PROGRAM_VERSION=2.3.1
 RUBY_BASE_NAME=ruby
 RUBY_VERSION_NAME=${RUBY_BASE_NAME}-${ruby_version}
 RUBY_SO_NAME=${RUBY_BASE_NAME}
@@ -44,7 +44,7 @@ LIBRUBY=${LIBRUBY_A}
 LIBRUBYARG_SHARED=
 LIBRUBYARG_STATIC=-l${RUBY_SO_NAME}-static -framework CoreFoundation
 LIBRUBYARG=${LIBRUBYARG_STATIC}
-LIBS=-lpthread -ldl -lobjc
+LIBS=-lpthread -lgmp -ldl -lobjc
 DLDFLAGS=-Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/gdbm/lib -L/usr/local/opt/libffi/lib
 
 Name: Ruby

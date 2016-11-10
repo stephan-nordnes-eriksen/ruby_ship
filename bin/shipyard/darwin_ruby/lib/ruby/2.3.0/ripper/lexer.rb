@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 #
-# $Id: lexer.rb 53143 2015-12-16 05:31:54Z naruse $
+# $Id: lexer.rb 54471 2016-04-01 17:08:01Z naruse $
 #
 # Copyright (c) 2004,2005 Minero Aoki
 #
@@ -66,7 +66,7 @@ class Ripper
     private
 
     def on_heredoc_dedent(v, w)
-      @buf.each do |e|
+      @buf.last.each do |e|
         if e.event == :on_tstring_content
           if (n = dedent_string(e.tok, w)) > 0
             e.pos[1] += n

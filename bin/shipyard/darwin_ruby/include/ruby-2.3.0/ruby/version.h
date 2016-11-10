@@ -2,7 +2,7 @@
 
   ruby/version.h -
 
-  $Author: nobu $
+  $Author: naruse $
   created at: Wed May 13 12:56:56 JST 2009
 
   Copyright (C) 1993-2009 Yukihiro Matsumoto
@@ -13,7 +13,7 @@
 
 /*
  * This file contains only
- * - never-changable informations, and
+ * - never-changeable informations, and
  * - interfaces accessible from extension libraries.
  *
  * Never try to check RUBY_VERSION_CODE etc in extension libraries,
