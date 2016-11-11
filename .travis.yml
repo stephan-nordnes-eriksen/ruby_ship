@@ -2,4 +2,4 @@ os:
   - linux
   - osx
 script:
-- bundle exec rake build
+- ./bin/ruby_ship.sh tools/implementation_tests.rb
