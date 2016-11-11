@@ -53,8 +53,9 @@ make install
 
 
 #SETTING UP REFERENCE DIRECTORIES
-RUBY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/include)"
-RUBY_VERSION_DIR="$(echo $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
+RUBY_MINOR_VERSION="$(echo $RUBY_VERSION | sed 's,\.[0-9]\+$,,')"
+RUBY_INSTALL_DIR="$(ls -d $DIR/../bin/shipyard/${OS}_ruby/include/ruby-${RUBY_MINOR_VERSION}*)"
+RUBY_VERSION_DIR="$(basename $RUBY_INSTALL_DIR | cut -d'-' -f 2)"
 RUBY_BINARY_INSTALL_DIR="$(ls $DIR/../bin/shipyard/${OS}_ruby/lib/ruby/$RUBY_VERSION_DIR | grep ${OS})"
 
 #SETTING UP COMMON WRAPPER COMPONENTS
