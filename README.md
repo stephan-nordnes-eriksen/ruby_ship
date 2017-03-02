@@ -109,6 +109,8 @@ To build on windows you need to have the following:
 - **7-zip with command line tools**. Remember to add to PATH variable (http://www.7-zip.org/)
 - **nmake**. nmake comes bundled with any version of Visual Studio (http://www.visualstudio.com/) _NB: install to default location, or the script won't work_
 
+## Questions, suggestions, and general enquiries can be submitted as issues on the repo!
+
 ## License:
 
 MIT
