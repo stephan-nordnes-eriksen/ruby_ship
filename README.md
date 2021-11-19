@@ -1,5 +1,6 @@
 Ruby Ship
 =========
+![Ruby Ship](/image/ruby_ship.png?raw=true)
 
 [![Join the chat at https://gitter.im/stephan-nordnes-eriksen/ruby_ship](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stephan-nordnes-eriksen/ruby_ship?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -13,7 +14,6 @@ With Ruby Ship you can copy the entire folder into your project and use the wrap
 
 Ruby Ship comes with tools to compile your favourite Ruby version too! This way, you are not stuck with the binaries that Ruby Ship happens to come with. 
 
-![Ruby Ship](/image/ruby_ship.png?raw=true)
 
 
 ## Install:
